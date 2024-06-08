@@ -1,0 +1,20 @@
+
+==== Start of Block 1 ====
+==== Description of Block 1 ====The first line includes the contents of the standard input/output stream library, allowing the program to use input and output operations.
+The second line includes the contents of the standard input/output library, which provides functions for input and output operations.
+The third line declares the main function, which is the entry point of the program.
+==== End of Block 1 ====
+
+==== Start of Block 2 ====
+==== Description of Block 2 ====This block of code is the main function of the program, enclosed in curly braces.
+It declares several integer variables: userInput, maxNumber, minNumber, sumTotal, and a float variable average.
+It uses a for loop to get three numbers from the user using scanf and prints them using std::cout.
+Inside the loop, it updates the maxNumber and minNumber variables to keep track of the maximum and minimum numbers entered by the user.
+It also calculates the sum of the numbers in the sumTotal variable.
+After the loop, it prints the maximum, minimum, sum, and average of the three numbers.
+Finally, it returns 0 to indicate successful execution of the program.
+==== End of Block 2 ====
+
+==== Start of Block 3 ====
+No code provided in Block 3
+==== End of Block 3 ====

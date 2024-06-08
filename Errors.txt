@@ -1,0 +1,36 @@
+(When python file is executed), Error 1 occurred
+Error 1: no module named 'google.auth' 
+Solved: pip install google-auth
+
+(When pip install google-auth is executed), Error 2 occurred
+Error 2: ERROR: Could not install packages due to an OSError: [WinError 2] The system cannot find the file specified: 
+'C:\\Python312\\Scripts\\pyrsa-decrypt.exe' -> 'C:\\Python312\\Scripts\\pyrsa-decrypt.exe.deleteme' 
+Solved: pip install cryptography
+
+(When pip install google-cloud-aiplatform is executed), Error 3 occurred
+Error 3: ERROR: Could not find a version that satisfies the requirement pyrsa-decrypt.exe (from versions: none)
+         ERROR: No matching distribution found for pyrsa-decrypt.exe
+Solved: Reinstall pip install google-cloud-aiplatform
+
+Vertex AI Setup: https://www.youtube.com/watch?v=DQQCkZ2B-MA
+
+PaLM 2 Chat Bison setup - https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/chat-bison?_ga=2.95102489.468382888.1715596491-1154395271.1713430180&project=code-analyse&chat=true
+
+The region is set to us-central1-a, only then the model - chat bison worked and I had to remove the def to see the output
+
+chat-bison@001 test function:
+
+"""int main() {
+            std::cout << "Hello, World!" << std::end;
+            }"""
+
+Response: This line defines the main function, which is the entry point for all C++ programs. The function takes no arguments and returns an integer value. The body of the function consists of a single statement that prints the text "Hello, World!" to the console.
+
+chat-bison@002 test function:
+
+"""int main() {
+            std::cout << "Hello, World!" << std::end;
+            }"""
+
+Response: The main function is the entry point of the program.
+It prints the message "Hello, World!" to the standard output stream and then terminates the program.
