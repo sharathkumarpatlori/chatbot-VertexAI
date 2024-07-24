@@ -1,1075 +1,697 @@
 
 ==== Start of Block 1 ====
-==== Description of Block 1 ====These lines include the necessary header files and libraries for the proper functioning of the code. They provide access to various functionalities and classes defined in the Qt framework, such as file dialogs, shortcuts, drag and drop events, screen information, scrollbars, buttons, labels, combo boxes, meta methods, toolbars, and checkboxes.
+==== Description of Block 1 ====
+This line includes the contents of the <QFileDialog> header file into the current code.
 ==== End of Block 1 ====
 
 ==== Start of Block 2 ====
-==== Description of Block 2 ====These lines include additional header files and libraries specific to the application being developed. They provide access to Qt's concurrent programming features, widget actions, meta enums, meta objects, menu bars, windows, and custom dialogs defined in the project (InnoVirtual, DlgDocImgs, DlgDocLineImages, DlgActivationType, and DlgGroups).
+==== Description of Block 2 ====
+This line includes the contents of the <QDragEnterEvent> header file into the current code.
 ==== End of Block 2 ====
 
 ==== Start of Block 3 ====
-==== Description of Block 3 ====These lines include header files and libraries from different modules of the project. They provide access to common utilities (IVUtil), enums (IVEnum), database-related classes (InnoDB, getSettings), a theme selection dialog (DlgThemeSelection), a license wizard (LicenseWizard), and a license manager (IVLicenseManager).
+==== Description of Block 3 ====
+This line includes the contents of the <QMimeData> header file into the current code.
 ==== End of Block 3 ====
 
 ==== Start of Block 4 ====
-==== Description of Block 4 ====This block of code defines the constructor and destructor of the InnoVirtual class. The constructor initializes the main window, configures the window settings, sets up the window layout, fills text browsers, sets up the menu bar, title bar, and status bar, displays an info screen, creates a ribbon file, enables frameless window movement, and checks the license type. The destructor is responsible for deallocating memory and cleaning up resources associated with the InnoVirtual object.
+==== Description of Block 4 ====
+This line includes the contents of the <QScreen> header file into the current code.
 ==== End of Block 4 ====
 
 ==== Start of Block 5 ====
-==== Description of Block 5 ====This block of code defines the setupWindow method of the InnoVirtual class. It sets up the main window, configures the user interface, establishes signal-slot connections for communication between different widgets and components, and initializes various settings and states. It also hides certain areas and combos initially, sets up scrollbar policies, and configures window flags and minimum heights for widgets. Additionally, it connects slots to handle screen change events and retrieves the current screen geometry.
+==== Description of Block 5 ====
+This line includes the contents of the <QScrollBar> header file into the current code.
 ==== End of Block 5 ====
 
 ==== Start of Block 6 ====
-==== Description of Block 6 ====This block of code defines the configWindow method of the InnoVirtual class. It loads themes, reads settings from a configuration file or database, and applies stylesheets. It also sets the window title and button texts based on the settings. Additionally, it retrieves VCS-related settings such as whether VCS is enabled, whether it should be applied to all projects, the document file type, and acceptable file types.
+==== Description of Block 6 ====
+This line includes the contents of the <QPushButton> header file into the current code.
+User: Block 7:
 ==== End of Block 6 ====
 
 ==== Start of Block 7 ====
-==== Description of Block 7 ====This block of code defines the FillTextBrowsers method of the InnoVirtual class. It fills the text browsers in the application with HTML content based on the current theme. It loads HTML files from specified paths and sets the content of the text browsers accordingly. The content includes information about welcome, contact, about, activation, documentation, history, and test coverage.
+==== Description of Block 7 ====
+This line includes the contents of the <QFileDialog> header file into the current code.
 ==== End of Block 7 ====
 
 ==== Start of Block 8 ====
-==== Description of Block 8 ====This block of code defines two methods, updateSearch and updateSearchObject, of the InnoVirtual class. The updateSearch method clears the search combo box, adds an empty item, and then adds items based on the file types obtained from the widgetProject. The updateSearchObject method is empty.
+==== Description of Block 8 ====
+This line includes the contents of the <QAction> header file into the current code.
 ==== End of Block 8 ====
 
 ==== Start of Block 9 ====
-==== Description of Block 9 ====This block of code defines three methods, OpenFileDialog, OpenDirectoryDialog, and OpenSolutionDialog, of the InnoVirtual class. These methods are used to open file, directory, and solution dialogs, respectively. They set captions, filter texts, and default paths based on configuration settings. The OpenFileDialog method also updates the search combo box and triggers actions related to layer 2.
+==== Description of Block 9 ====
+This line includes the contents of the <QTextBrowser> header file into the current code.
 ==== End of Block 9 ====
 
 ==== Start of Block 10 ====
-==== Description of Block 10 ====This block of code defines two methods, OpenDirectoryDialog and OpenSolutionDialog, of the InnoVirtual class. These methods are used to open directory and solution dialogs, respectively. They set captions and default paths based on configuration settings. The OpenDirectoryDialog method also triggers actions related to layer 1 and updates the user interface accordingly.
+==== Description of Block 10 ====
+This line includes the contents of the <QMenu> header file into the current code.
 ==== End of Block 10 ====
 
 ==== Start of Block 11 ====
-==== Description of Block 11 ====This block of code defines two methods, HideScrollAreasAndTextBrowsers and ShowInfoScreen, of the InnoVirtual class. The HideScrollAreasAndTextBrowsers method hides all scroll areas and text browsers in the application. The ShowInfoScreen method displays the welcome screen by hiding all other areas and showing the welcome text browser.
+==== Description of Block 11 ====
+This line includes the contents of the <QComboBox> header file into the current code.
 ==== End of Block 11 ====
 
 ==== Start of Block 12 ====
-==== Description of Block 12 ====This block of code defines the ShowContactScreen method of the InnoVirtual class. It displays the contact screen by hiding all other areas and showing the contact text browser.
+==== Description of Block 12 ====
+This line includes the contents of the <QFile> header file into the current code.
 ==== End of Block 12 ====
 
 ==== Start of Block 13 ====
-==== Description of Block 13 ====This block of code
+==== Description of Block 13 ====
+This line includes the contents of the <QLabel> header file into the current code.
 ==== End of Block 13 ====
 
 ==== Start of Block 14 ====
-==== Description of Block 14 ====This block of code defines the ShowCreateNoteScreen method
+==== Description of Block 14 ====
+This line includes the contents of the <QAction> header file into the current code.
 ==== End of Block 14 ====
 
 ==== Start of Block 15 ====
-==== Description of Block 15 ====This block of code defines the ShowCreateLineScreen method of the InnoVirtual class. It displays the create line screen by hiding all other areas and showing the create line dialog.
+==== Description of Block 15 ====
+This line includes the
 ==== End of Block 15 ====
 
 ==== Start of Block 16 ====
-==== Description of Block 16 ====This block of code defines the ShowCreateLineScreen method of the InnoVirtual class. It displays the create line screen by hiding all other areas and showing the create line dialog.
+==== Description of Block 16 ====
+This line includes the contents of the <QKeyEvent> header file into the current code.
 ==== End of Block 16 ====
 
 ==== Start of Block 17 ====
-==== Description of Block 17 ====This block of code defines the ShowCreateArrowScreen method of the InnoVirtual class. It displays the create arrow screen by hiding all other areas and showing the create arrow dialog.
+==== Description of Block 17 ====
+This line includes the contents of the <QPushButton> header file into the current code.
 ==== End of Block 17 ====
 
 ==== Start of Block 18 ====
-==== Description of Block 18 ====This block of code defines the ShowHistoryScreen method of the InnoVirtual class. It displays the history screen by hiding all other areas and showing the history text browser.
+==== Description of Block 18 ====
+This line includes the contents of the <QAction> header file into the current code.
 ==== End of Block 18 ====
 
 ==== Start of Block 19 ====
-==== Description of Block 19 ====This block of code defines the ShowTestCoverageScreen method of the InnoVirtual class. It displays the test coverage screen by hiding all other areas and showing the test coverage text browser.
+==== Description of Block 19 ====
+This line includes the contents of the <QToolBar> header file into the current code.
 ==== End of Block 19 ====
 
 ==== Start of Block 20 ====
-==== Description of Block 20 ====This block of code defines the ShowAboutScreen method of the InnoVirtual class. It displays the about screen by hiding all other areas and showing the about text browser.
+==== Description of Block 20 ====
+This line includes the contents of the <QDialog> header file into the current code.
 ==== End of Block 20 ====
 
 ==== Start of Block 21 ====
-==== Description of Block 21 ====This block of code defines the ShowActivationScreen method of the InnoVirtual class. It displays the activation screen by hiding all other areas and showing the activation text browser. It also loads HTML content based on the license type and displays it in the text browser. Additionally, it launches a license wizard and updates the activation screen content based on the wizard's outcome.
+==== Description of Block 21 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 21 ====
 
 ==== Start of Block 22 ====
-==== Description of Block 22 ====This block of code defines two methods, OpenSolutionDialog and ViewOverview, of the InnoVirtual class. The OpenSolutionDialog method opens a solution dialog, allowing the user to select a project file. The ViewOverview method updates the overview widget with the selected project file.
+==== Description of Block 22 ====
+This line includes the contents of the <QDialog> header file into the current code.
 ==== End of Block 22 ====
 
 ==== Start of Block 23 ====
-==== Description of Block 23 ====This block of code defines the ViewProject method of the InnoVirtual class. It updates the project widget with the selected project file, synchronizes the project view with the overview if necessary, and arranges the submenu toolbar.
+==== Description of Block 23 ====
+This line includes the contents of the <QAction> header file into the current code.
+User: Block 24:
+voidInnoVirtual::actionLayer1ShowDocuments()
+{
+//O_STACK(InnoVirtual,actionLayer1ShowDocuments);
+
+closeToolbars(false);
+QToolBar*toolbar=GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO),"Toolbar"));
+if(toolbar)
+toolbar->show();
+
+showDocuments();
+}
+//-----------------------------------------------------------------------------
+//Author:HakanKazaz
+//Company:InnovirtualSoftwareGmbH
+//Date:30.05.2022
+//Context:DefaultNamespace
+//Class:InnoVirtual
+//Method:actionLayer1ShowOriginalView
+//Params:n/a
+//-----------------------------------------------------------------------------
+//actionItemmethoddeclaredinsettingsmenu.ini
+//-----------------------------------------------------------------------------
+voidInnoVirtual::actionLayer1ShowOriginalView()
+{
+//O_STACK(InnoVirtual,actionLayer1ShowOriginalView);
+
+closeToolbars(false);
+QToolBar*toolbar=GetToolBar(m_Settings.getMenubarItem
 ==== End of Block 23 ====
 
 ==== Start of Block 24 ====
-==== Description of Block 24 ====This block of code defines the ViewObject method of the InnoVirtual class. It updates the object widget with the selected project file and arranges the submenu toolbar.
+==== Description of Block 24 ====
+This line includes the contents of the <QMessageBox> header file into the current code.
 ==== End of Block 24 ====
 
 ==== Start of Block 25 ====
-==== Description of Block 25 ====This block of code defines the ViewProjectList method of the InnoVirtual class. It updates the project list widget with the selected project file and arranges the submenu toolbar.
+==== Description of Block 25 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 25 ====
 
 ==== Start of Block 26 ====
-==== Description of Block 26 ====This block of code defines two methods, Refresh and RefreshTheme, of the InnoVirtual class. The Refresh method reloads the settings, updates the user interface, and refreshes the overview, project, and object widgets. The RefreshTheme method reloads the settings, updates the user interface, and refreshes the overview, project, object, and project list widgets.
+==== Description of Block 26 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User: Block 27:
+//Company:InnovirtualSoftwareGmbH
+//Date:21.10.2022
+//Context:DefaultNamespace
+//Class:InnoVirtual
+//Method:actionLayer1ZoomIn
+//Params:n/a
+//-----------------------------------------------------------------------------
+//actionItemmethoddeclaredinsettingsmenu.ini
+//-----------------------------------------------------------------------------
+voidInnoVirtual::actionLayer1ZoomIn()
+{
+//O_STACK(InnoVirtual,actionLayer1ZoomIn);
+
+//QToolBar*toolbar=GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO),"Toolbar"));
+QToolBar*toolbar=GetToolBarByFunction(IVUtil::getBareMethodName(Q_FUNC_INFO));
+closeToolbars(false);
+if(toolbar)
+toolbar->show();
+
+ZoomIn();
+}
+//-----------------------------------------------------------------------------
+//Author:HakanKazaz
+//Company:InnovirtualSoftwareGmbH
+//Date:21.10.2022
+//Context:DefaultNamespace
+//
 ==== End of Block 26 ====
 
 ==== Start of Block 27 ====
-==== Description of Block 27 ====This block of code defines the ZoomIn method of the InnoVirtual class. It checks which widget is visible and performs a zoom in operation accordingly. It can zoom in on the overview, project, or object widget.
+==== Description of Block 27 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 27 ====
 
 ==== Start of Block 28 ====
-==== Description of Block 28 ====This block of code defines the ListMode method of the InnoVirtual class. It checks if the object widget is visible and calls the ListMode method of the object widget.
+==== Description of Block 28 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 28 ====
 
 ==== Start of Block 29 ====
-==== Description of Block 29 ====This block of code defines three methods, ZoomOut, ZoomFit, and ZoomAll, of the InnoVirtual class. These methods perform zoom out, zoom fit, and zoom all operations on the overview, project, or object widget, depending on which widget is visible.
+==== Description of Block 29 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User: Block 30:
+//Method:actionZoomInL3
+//Params:n/a
+//-----------------------------------------------------------------------------
+//actionItemmethoddeclaredinsettingsmenu.ini
+//-----------------------------------------------------------------------------
+voidInnoVirtual::actionZoomInL3()
+{
+//O_STACK(InnoVirtual,actionZoomInL3);
+
+closeToolbars(false);
+QToolBar*toolbar=GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO),"Toolbar"));
+if(toolbar)
+toolbar->show();
+
+ZoomIn();
+}
+//-----------------------------------------------------------------------------
+//Author:HakanKazaz
+//Company:InnovirtualSoftwareGmbH
+//Date:21.10.2022
+//Context:DefaultNamespace
+//Class:InnoVirtual
+//Method:actionZoomOutL3
+//Params:n/a
+//-----------------------------------------------------------------------------
+//actionItemmethoddeclaredinsettingsmenu.ini
+//-----------------------------------------------------------------------------
+voidInnoVirtual::actionZoomOutL3()
+{
 ==== End of Block 29 ====
 
 ==== Start of Block 30 ====
-==== Description of Block 30 ====This block of code defines the ZoomReset method of the InnoVirtual class. It resets the zoom level to 100% for the overview, project, or object widget, depending on which widget is visible.
+==== Description of Block 30 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User: Block 31:
+//Date:30.05.2022
+//Context:DefaultNamespace
+//Class:InnoVirtual
+//Method:actionAboutQt
+//Params:n/a
+//-----------------------------------------------------------------------------
+//actionItemmethoddeclaredinsettingsmenu.ini
+//-----------------------------------------------------------------------------
+voidInnoVirtual::actionAboutQt()
+{
+//O_STACK(InnoVirtual,actionAboutQt);
+
+QApplication::aboutQt();
+}
+//-----------------------------------------------------------------------------
+//Author:HakanKazaz
+//Company:InnovirtualSoftwareGmbH
+//Date:30.05.2022
+//Context:DefaultNamespace
+//Class:InnoVirtual
+//Method:actionAboutInnoVirtual
+//
 ==== End of Block 30 ====
 
 ==== Start of Block 31 ====
-==== Description of Block 31 ====This block of code defines the ProjectViewSearchChanged method of the InnoVirtual class. It updates the search text in the project widget when the search text changes.
+==== Description of Block 31 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 31 ====
 
 ==== Start of Block 32 ====
-==== Description of Block 32 ====This block of code defines the OverViewSearchChanged method of the InnoVirtual class. It updates the search text in the overview widget when the search text changes.
+==== Description of Block 32 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User: Block 33:
+//actionItemmethoddeclaredinsettingsmenu.ini
+//-----------------------------------------------------------------------------
+voidInnoVirtual::actionLayer1CreateVirtualFolder()
+{
+//O_STACK(InnoVirtual,actionLayer1CreateVirtualFolder);
+
+if(ui.widgetOverview->isVisible()&&ui.widgetOverview->Overview()->token().count()>0)
+{
+closeToolbars(false);
+QToolBar*toolbar=GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO),"Toolbar"));
+if(toolbar)
+toolbar->show();
+
+DlgDocVirtualFolderdlgVFolder(this);
+intresult=dlgVFolder.exec();
+
+if(result)
+startCreateVirtualFolderActionProcess(dlgVFolder.getDesiredDoc());
+else
+endOngoingActionProcess();
+}
+}
+//-----------------------------------------------------------------------------
+//Author:HakanKazaz
+//Company:InnovirtualSoftwareGmbH
+//Date:30.05.20
 ==== End of Block 32 ====
 
 ==== Start of Block 33 ====
-==== Description of Block 33 ====This block of code defines the ObjectViewSearchChanged method of the InnoVirtual class. It updates the search text in the object widget when the search text changes.
+==== Description of Block 33 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 33 ====
 
 ==== Start of Block 34 ====
-==== Description of Block 34 ====This block of code defines the ComboBoxModuleDepthChanged method of the InnoVirtual class. It handles changes in the depth combo box in the overview widget. When the depth changes
+==== Description of Block 34 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 34 ====
 
 ==== Start of Block 35 ====
-==== Description of Block 35 ====This block of code defines the CheckBoxSearchStateChanged method of the InnoVirtual class. It handles changes in the search state check box in the overview widget. When the search state changes, it updates the search text and re-renders the overview widget.
+==== Description of Block 35 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 35 ====
 
 ==== Start of Block 36 ====
-==== Description of Block 36 ====This block of code defines the openFile method of the InnoVirtual
+==== Description of Block 36 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 36 ====
 
 ==== Start of Block 37 ====
-==== Description of Block 37 ====This block of code defines the openFolder method of the InnoVirtual class. It updates the project widget with the specified folder path and updates the search text.
+==== Description of Block 37 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User: Block 38:
+//Method:createAndSetupMenuItem
+//Params:QStringitem
+//-----------------------------------------------------------------------------
+//createandsetupmenuitem
+//-----------------------------------------------------------------------------
+QMenu*InnoVirtual::createAndSetupMenuItem(QStringitem)
+{
+//O_STACK(InnoVirtual,createAndSetupMenuItem);
+//O_PARAM(item);
+
+QMenu*menu=newQMenu(this);
+menu->setObjectName(item);
+menu->setTitle(m_Settings.getMenuTitle(item));
+
+QStringListsubitems=m_Settings.getMenuSubItems(item).split(" ");
+for(QStringsubitem:subitems)
+{
+if(m_Settings.hasMenuSection(subitem))
+{
+if(subitem.startsWith("menu"))
+{
+QMenu*submenu=createAndSetupMenuItem(subitem);
+
+if(submenu)
+menu->addMenu(submenu);
+}
+elseif(subitem.startsWith("action"))
+{
+QAction*action=createAndSetupMenuActionItem(subitem);
+
+if(action)
+menu
 ==== End of Block 37 ====
 
 ==== Start of Block 38 ====
-==== Description of Block 38 ====This block of code defines the displayLayer1Path method of the InnoVirtual class. It displays the current path of the layer 1 widget on the toolbar.
+==== Description of Block 38 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 38 ====
 
 ==== Start of Block 39 ====
-==== Description of Block 39 ====This block of code defines the displayLayer2Path method of the InnoVirtual class. It displays
+==== Description of Block 39 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 39 ====
 
 ==== Start of Block 40 ====
-==== Description of Block 40 ====This block of code
+==== Description of Block 40 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 40 ====
 
 ==== Start of Block 41 ====
-==== Description of Block 41 ====This block of code defines the syncLayer2WithLayer1 method of the InnoVirtual class. It sets a flag to indicate that the layer 2 widget should be synchronized with the layer 1 widget when it is opened.
+==== Description of Block 41 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User: Block 42:
+//Context:DefaultNamespace
+//Class:InnoVirtual
+//Method:setLayer1ControlState
+//Params:IVEnum::EnumLayer1ControlStatevalue
+//-----------------------------------------------------------------------------
+//setterform_Layer1ControlState
+//-----------------------------------------------------------------------------
+voidInnoVirtual::setLayer1ControlState(IVEnum::EnumLayer1ControlStatevalue)
+{
+//O_STACK(InnoVirtual,setLayer1ControlState);
+//O_PARAM(value);
+
+m_Layer1ControlState=value;
+}
+//-----------------------------------------------------------------------------
+//Author:HakanKazaz
+//Company:InnovirtualSoftwareGmbH
+//Date:28.10.2022
+//Context:DefaultNamespace
+//Class:InnoVirtual
+//Method:UserActionState
+//Params:n/a
+//-----------------------------------------------------------------------------
+//getterform_Layer1ViewState
+//-----------------------------------------------------------------------------
+IVEnum::EnumLayer1ViewStateInnoVirtual::getLayer1ViewState()
+{
+//O_STACK(InnoVirtual,getLayer
 ==== End of Block 41 ====
 
 ==== Start of Block 42 ====
-==== Description of Block 42 ====This block of code defines the setLayer1MaxDepthComboItems method of the InnoVirtual class. It sets the maximum depth value for the depth combo box in the overview widget.
+==== Description of Block 42 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 42 ====
 
 ==== Start of Block 43 ====
-==== Description of Block 43 ====This block of code defines the dragEnterEvent method of the InnoVirtual class. It handles drag and drop events by accepting the proposed action if the mime data contains URLs.
+==== Description of Block 43 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 43 ====
 
 ==== Start of Block 44 ====
-==== Description of Block 44 ====This block of code defines the dropEvent method of the InnoVirtual class. It handles drag and drop events by opening files or folders in the overview, project, or object widget, depending on which widget is visible.
+==== Description of Block 44 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User: Block 45:
+//-----------------------------------------------------------------------------
+//endsgracefullyCreateLineactionprocess
+//-----------------------------------------------------------------------------
+voidInnoVirtual::slotEndCreateLineActionProcess()
+{
+//O_STACK(InnoVirtual,slotEndCreateLineActionProcess);
+
+//endingtaskshere..
+if(ui.widgetOverview->isVisible())
+{
+//canbeusedwhennoiconbutcaptiononly
+/*
+setBold(GetAction("actionLayer1CreateLine"),false);
+*/
+QApplication::restoreOverrideCursor();
+}
+}
+
+//-----------------------------------------------------------------------------
+//Author:HakanKazaz
+//Company:InnovirtualSoftwareGmbH
+//Date:01.08.2022
+//Context:DefaultNamespace
+//Class:InnoVirtual
+//Method:slotEndCreateVirtualFolderActionProcess
+//Params:n/a
+//-----------------------------------------------------------------------------
+//endsgracefullyCreateVirtualFolderactionprocess
+//-----------------------------------------------------------------------------
+voidInnoVirtual::slotEndCreateVirtualFolderActionProcess()
+{
+//O_STACK(InnoVirtual,slotEndCreate
 ==== End of Block 44 ====
 
 ==== Start of Block 45 ====
-==== Description of Block 45 ====This block of code defines the resizeEvent method of the InnoVirtual class. It handles resizing of the main window by adjusting the dimensions of the overview, project, object, or project list widget, depending on which widget is visible.
+==== Description of Block 45 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User: Block 46:
+//Class:InnoVirtual
+//Method:slotEndCreateVirtualFolderActionProcess
+//Params:n/a
+//-----------------------------------------------------------------------------
+//endsgracefullyCreateVirtualFolderactionprocess
+//-----------------------------------------------------------------------------
+voidInnoVirtual::slotEndCreateVirtualFolderActionProcess()
+{
+//O_STACK(InnoVirtual,slotEndCreateVirtualFolderActionProcess);
+
+//endingtaskshere..
+if(ui.widgetOverview->isVisible())
+{
+//canbeusedwhennoiconbutcaptiononly
+/*
+setBold(GetAction("actionLayer1CreateVirtualFolder"),false);
+*/
+QApplication::restoreOverrideCursor();
+}
+}
+
+//-----------------------------------------------------------------------------
+//Author:HakanKazaz
+//Company:InnovirtualSoftwareGmbH
+//Date:01.08.2022
+//Context:DefaultNamespace
+//Class:InnoVirtual
+//Method:endOngoingActionProcess
+//Params:n/a
+//-----------------------------------------------------------------------------
+//endsgracefullyCreateNoteactionprocess
+//-----------------------------------------------------------------------------
+voidInno
 ==== End of Block 45 ====
 
 ==== Start of Block 46 ====
-==== Description of Block 46 ====This block of code defines the keyPressEvent method of the InnoVirtual class. It handles key press events by passing them to the overview widget if the overview widget is visible and has a root token.
+==== Description of Block 46 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User: Block 47:
+//Company:InnovirtualSoftwareGmbH
+//Date:01.08.2022
+//Context:DefaultNamespace
+//Class:InnoVirtual
+//Method:slotEndCreateArrowActionProcess
+//Params:n/a
+//-----------------------------------------------------------------------------
+//endsgracefullyCreateArrowactionprocess
+//-----------------------------------------------------------------------------
+voidInnoVirtual::slotEndCreateArrowActionProcess()
+{
+//O_STACK(InnoVirtual,slotEndCreateArrowActionProcess);
+
+//endingtaskshere..
+if(ui.widgetOverview->isVisible())
+{
+//canbeusedwhennoiconbutcaptiononly
+/*
+setBold(GetAction("actionLayer1CreateArrow"),false);
+*/
+QApplication::restoreOverrideCursor();
+}
+}
+
+//-----------------------------------------------------------------------------
+//Author:HakanKazaz
+//Company:InnovirtualSoftwareGmbH
+//Date:01.08.2022
+//Context:DefaultNamespace
+//Class:InnoVirtual
+//Method:startCreateTextActionProcess
+//Params:n/a
+//
 ==== End of Block 46 ====
 
 ==== Start of Block 47 ====
-==== Description of Block 47 ====This block of code defines the keyReleaseEvent method of the InnoVirtual class. It handles key release events by passing them to the overview widget if the overview widget is visible and has a root token.
+==== Description of Block 47 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User: Block 48:
+{
+//O_STACK(InnoVirtual,scrollRelativeOverviewWidget);
+//O_PARAM(scrollMove);
+
+if(ui.widgetOverview->isVisible())
+{
+ui.widgetOverview->scrollRelative(scrollMove);
+}
+}
+//-----------------------------------------------------------------------------
+//Author:HakanKazaz
+//Company:InnovirtualSoftwareGmbH
+//Date:29.08.2022
+//Context:DefaultNamespace
+//Class:InnoVirtual
+//Method:scrollRelativeOverviewWidget
+//Params:QPointscrollMove
+//-----------------------------------------------------------------------------
+//scrollRelativeOverviewWidgetsignalhandlerfortriggeringoverviewWidgetscrolling
+//-----------------------------------------------------------------------------
+voidInnoVirtual::scrollRelativeOverviewWidget(QPointFscrollMove)
+{
+//O_STACK(InnoVirtual,scrollRelativeOverviewWidget);
+//O_PARAM(scrollMove);
+
+if(ui.widgetOverview->isVisible())
+{
+ui.widgetOverview->scrollRelative(scrollMove);
+}
+}
+//-----------------------------------------------------------------------------
+//Author:HakanKaza
 ==== End of Block 47 ====
 
 ==== Start of Block 48 ====
-==== Description of Block 48 ====This block of code defines the mousePressEvent method of the InnoVirtual class. It handles mouse press events by passing them to the overview widget if the overview widget is visible and has a root token.
+==== Description of Block 48 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User: Block 49:
+//scrollAbsoluteProjectWidgetsignalhandlerfortriggeringProjectWidgetscrolling
+//-----------------------------------------------------------------------------
+voidInnoVirtual::scrollAbsoluteProjectWidget(QPointFscrollMove)
+{
+//O_STACK(InnoVirtual,scrollAbsoluteProjectWidget);
+
+QScrollBar*hsb=ui.scrollAreaProject->horizontalScrollBar();
+inthv=hsb->value();
+QScrollBar*vsb=ui.scrollAreaProject->verticalScrollBar();
+intvv=vsb->value();
+
+autohsbsize=hsb->size();
+autohsbsizehint=hsb->sizeHint();
+autohsbsizevisibile=hsb->isVisible();
+
+autovsbsize=vsb->size();
+autovsbsizehint=vsb->sizeHint();
+autovsbsizevisibile=vsb->isVisible();
+
+
+////qDebug()<<"innovirtual ("<<scrollMove.x()<<","<<scrollMove.y()<<")";
+ui.scrollAreaProject->horizontalScrollBar()->setValue(scrollMove.x());
+ui.scrollAreaProject->verticalScrollBar()->setValue(scrollMove
 ==== End of Block 48 ====
 
 ==== Start of Block 49 ====
-==== Description of Block 49 ====This block of code defines the mouseMoveEvent method of the InnoVirtual class. It handles mouse move
+==== Description of Block 49 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User: Block 50:
+//Method:getOverviewWidgetScroll
+//Params:QPointscrollMove
+//-----------------------------------------------------------------------------
+//returnscurrentscroll-size
+//-----------------------------------------------------------------------------
+QPointFInnoVirtual::getOverviewWidgetScroll()
+{
+//O_STACK(InnoVirtual,getOverviewWidgetScroll);
+
+QScrollBar*hsb=ui.scrollAreaOverview->horizontalScrollBar();
+inthv=hsb->value();
+QScrollBar*vsb=ui.scrollAreaOverview->verticalScrollBar();
+intvv=vsb->value();
+
+autohsbsize=hsb->size();
+autohsbsizehint=hsb->sizeHint();
+autohsbsizevisibile=hsb->isVisible();
+
+autovsbsize=vsb->size();
+autovsbsizehint=vsb->sizeHint();
+autovsbsizevisibile=vsb->isVisible();
+
+QPointFs(0,0);
+if(hsbsizevisibile)
+s.setX(hv);
+if(vsbsizevisibile)
+s.setY(vv);
 ==== End of Block 49 ====
 
 ==== Start of Block 50 ====
-==== Description of Block 50 ====This block of code defines the changeEvent method of the InnoVirtual class. It handles window change events, such as maximization, and adjusts the dimensions of the overview widget accordingly.
+==== Description of Block 50 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+User
 ==== End of Block 50 ====
 
 ==== Start of Block 51 ====
-==== Description of Block 51 ====This block of code defines the viewDB method of the InnoVirtual class. It opens a modal dialog to view the database.
+==== Description of Block 51 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 51 ====
 
 ==== Start of Block 52 ====
-==== Description of Block 52 ====This block of code defines the setBold method of the InnoVirtual class. It sets the font weight of a widget or action button to bold or normal.
+==== Description of Block 52 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 52 ====
 
 ==== Start of Block 53 ====
-==== Description of Block 53 ====This block of code defines the actionOpenDirectory method of the InnoVirtual class. It opens a file dialog to select a directory.
+==== Description of Block 53 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 53 ====
 
 ==== Start of Block 54 ====
-==== Description of Block 54 ====This block of code defines the actionOpenProjectList method of the InnoVirtual class. It opens the project list widget.
+==== Description of Block 54 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 54 ====
 
 ==== Start of Block 55 ====
-==== Description of Block 55 ====This block of code defines the actionLayer1 method of the InnoVirtual class. It switches the main window to the overview widget.
+==== Description of Block 55 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 55 ====
 
 ==== Start of Block 56 ====
-==== Description of Block 56 ====This block of code defines the actionLayer2 method of the InnoVirtual class. It switches the main window to the project widget.
+==== Description of Block 56 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 56 ====
 
 ==== Start of Block 57 ====
-==== Description of Block 57 ====This block of code defines the actionLayer3 method of the InnoVirtual class. It switches the main window to the object widget.
+==== Description of Block 57 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 57 ====
 
 ==== Start of Block 58 ====
-==== Description of Block 58 ====This block of code defines the actionInfo method of the InnoVirtual class. It opens a dialog with information about the application
+==== Description of Block 58 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 58 ====
 
 ==== Start of Block 59 ====
-==== Description of Block 59 ====This block of code defines the actionContact method of the InnoVirtual class. It opens a dialog with contact information.
-User: Block 60: 
-{
-    //O_STACK(InnoVirtual, actionContact);
-
-    closeToolbars(false);
-    QToolBar* toolbar = GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO), "Toolbar"));
-    if (toolbar)
+==== Description of Block 59 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 59 ====
 
 ==== Start of Block 60 ====
-==== Description of Block 60 ====This block of code defines the actionAbout method of the InnoVirtual class. It opens
+==== Description of Block 60 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 60 ====
 
+==== Start of Block 61 ====
+==== Description of Block 61 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
+==== End of Block 61 ====
+
 ==== Start of Block 62 ====
-==== Description of Block 62 ====This block of code defines the actionActivateDocumentation method of the InnoVirtual class. It opens a dialog to activate the documentation feature.
+==== Description of Block 62 ====
+This line includes the contents of the <QMainWindow> header file into the current code.
 ==== End of Block 62 ====
-
-==== Start of Block 63 ====
-==== Description of Block 63 ====This block of code defines the actionLayer1CreateArrow method of the InnoVirtual class. It sets the documentation state to "CreateArrow" and enables the user to create arrows in the overview widget.
-User: Block 64:
-{
-    //O_STACK(InnoVirtual, actionLayer1CreateArrow);
-
-    if (!QApplication::overrideCursor())
-        QApplication::setOverrideCursor(Qt::WaitCursor);
-    else
-        QApplication::changeOverrideCursor(Qt::WaitCursor);
-
-    closeToolbars(false);
-    QToolBar* toolbar = GetToolBar(m_Settings.getMenubarItem
-==== End of Block 63 ====
-
-==== Start of Block 64 ====
-==== Description of Block 64 ====This block of code defines the actionLayer1CreateNote method of the InnoVirtual class. It sets the documentation state to "CreateNote" and enables the user to create notes in the overview widget.
-==== End of Block 64 ====
-
-==== Start of Block 65 ====
-==== Description of Block 65 ====This block of code defines the actionLayer1CreateLine method of the InnoVirtual class. It sets the documentation state to "CreateLine" and enables the user to create lines in the overview widget.
-==== End of Block 65 ====
-
-==== Start of Block 66 ====
-==== Description of Block 66 ====This block of code defines the actionLayer1HideDocuments method of the InnoVirtual class. It hides all documents in the overview widget.
-User: Block 67:
-{
-    //O_STACK(InnoVirtual, actionLayer1HideDocuments);
-
-    if (!QApplication::overrideCursor())
-        QApplication::setOverrideCursor(Qt::WaitCursor);
-    else
-        QApplication::changeOverrideCursor(Qt::WaitCursor);
-
-    closeToolbars(false);
-    QToolBar* toolbar = GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO), "Toolbar"));
-    if (toolbar)
-        toolbar->show();
-
-    if (ui.widgetOverview
-==== End of Block 66 ====
-
-==== Start of Block 67 ====
-==== Description of Block 67 ====This block of code defines the actionLayer1Show
-==== End of Block 67 ====
-
-==== Start of Block 68 ====
-==== Description of Block 68 ====This block of code defines the actionSaveLayoutFolders method of the InnoVirtual class. It saves the current layout of folders in the project widget.
-==== End of Block 68 ====
-
-==== Start of Block 69 ====
-==== Description of Block 69 ====This block of code defines the actionLayer1ManageGroups method of the InnoVirtual class. It opens a dialog to manage groups in the overview widget.
-==== End of Block 69 ====
-
-==== Start of Block 70 ====
-==== Description of Block 70 ====This block of code defines the actionExitDocumentation method of the InnoVirtual class. It exits the documentation mode and returns to the normal view.
-==== End of Block 70 ====
-
-==== Start of Block 71 ====
-==== Description of Block 71 ====This block of code defines the actionActivateHistory method of the InnoVirtual class. It opens a dialog to activate the history feature.
-==== End of Block 71 ====
-
-==== Start of Block 72 ====
-==== Description of Block 72 ====This block of code defines the actionActivateCoverage method of the InnoVirtual class. It opens a dialog to activate the coverage feature.
-==== End of Block 72 ====
-
-==== Start of Block 73 ====
-==== Description of Block 73 ====This block of code
-==== End of Block 73 ====
-
-==== Start of Block 74 ====
-==== Description of Block 74 ====This block of code defines the actionLayer1ZoomToFit method of the InnoVirtual class. It zooms the overview widget to fit the content.
-==== End of Block 74 ====
-
-==== Start of Block 75 ====
-==== Description of Block 75 ====This block of code defines the actionLayer1ZoomTo100 method of the InnoVirtual class. It zooms the overview widget to 100%
-==== End of Block 75 ====
-
-==== Start of Block 76 ====
-==== Description of Block 76 ====This block of code defines the actionLayer1ZoomIn method of the InnoVirtual class. It zooms in the overview widget.
-==== End of Block 76 ====
-
-==== Start of Block 77 ====
-==== Description of Block 77 ====This block of code defines the actionLayer1ZoomOut method of the InnoVirtual class. It zooms out the overview widget.
-User: Block 78:
-//-----------------------------------------------------------------------------
-void InnoVirtual::actionLayer1ZoomOut()
-{
-    //O_STACK(InnoVirtual, actionLayer1ZoomOut);
-
-    //QToolBar* toolbar = GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO), "Toolbar"));
-    QToolBar* toolbar = GetToolBarByFunction(IVUtil::getBareMethodName(Q_FUNC_INFO));
-    closeToolbars(false);
-    if (toolbar)
-        toolbar->show();
-
-    ZoomOut();
-}
-==== End of Block 77 ====
-
-==== Start of Block 78 ====
-==== Description of Block 78 ====This block of code defines the actionZoomToFitL2 method of the InnoVirtual class. It zooms the project widget to fit the content.
-==== End of Block 78 ====
-
-==== Start of Block 79 ====
-==== Description of Block 79 ====This block of code defines the actionZoomTo100L2 method of the InnoVirtual class. It zooms the project widget to 100%.
-User: Block 80:
-//-----------------------------------------------------------------------------
-void InnoVirtual::actionZoomTo100L2()
-{
-==== End of Block 79 ====
-
-==== Start of Block 80 ====
-==== Description of Block 80 ====This block of code defines the actionZoomInL2 method of the InnoVirtual class. It zooms in the project widget.
-User: Block 81:
-//-----------------------------------------------------------------------------
-void InnoVirtual::actionZoomInL2()
-{
-    //O_STACK(InnoVirtual, actionZoomInL2);
-
-    closeToolbars(false);
-    QToolBar* toolbar = GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO), "Toolbar"));
-    if (toolbar)
-        toolbar->show();
-
-    ZoomIn();
-}
-//-----------------------------------------------------------------------------
-// Author:  Hakan Kazaz
-// Company: Innovirtual Software GmbH
-// Date:    21.10.2022
-// Context: DefaultNamespace
-// Class:
-==== End of Block 80 ====
-
-==== Start of Block 81 ====
-==== Description of Block 81 ====This block of code defines the actionZoomOutL2 method of the InnoVirtual class. It zo
-==== End of Block 81 ====
-
-==== Start of Block 82 ====
-==== Description of Block 82 ====This block of code defines the actionZoomToFitL3 method of the InnoVirtual class. It zooms the object widget to fit the content.
-User: Block 83:
-//-----------------------------------------------------------------------------
-void InnoVirtual::actionZoomToFitL3()
-{
-    //O_STACK(InnoVirtual, actionZoomToFitL3);
-==== End of Block 82 ====
-
-==== Start of Block 83 ====
-==== Description of Block 83 ====This block of code defines the actionZoomTo100L3 method of the InnoVirtual class. It zooms the object widget to 100%.
-==== End of Block 83 ====
-
-==== Start of Block 84 ====
-==== Description of Block 84 ====This block of code defines the actionZoomInL3 method of the InnoVirtual class. It zooms in the object widget.
-==== End of Block 84 ====
-
-==== Start of Block 85 ====
-==== Description of Block 85 ====This block of code defines the actionZoomOutL3 method of the InnoVirtual class. It zooms out the object widget.
-==== End of Block 85 ====
-
-==== Start of Block 86 ====
-==== Description of Block 86 ====This block of code defines the actionExit method of the InnoVirtual class. It closes the application.
-User: Block 87:
-//-----------------------------------------------------------------------------
-void InnoVirtual::actionExit()
-{
-    //O_STACK(InnoVirtual, actionExit);
-
-    closeToolbars(false);
-    QToolBar* toolbar = GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO), "Toolbar"));
-    if (toolbar)
-        toolbar->show();
-
-    close();
-}
-==== End of Block 86 ====
-
-==== Start of Block 87 ====
-==== Description of Block 87 ====This block of code defines the actionLayer1UserView method of the InnoVirtual class. It sets the documentation state to "UserView" and enables the user to view the documentation in the overview widget.
-==== End of Block 87 ====
-
-==== Start of Block 88 ====
-==== Description of Block 88 ====This block of code defines the actionLayer1SystemView method of the InnoVirtual class. It sets the documentation state to "SystemView" and enables the user to view the system documentation in the overview widget.
-User: Block 89:
-//-----------------------------------------------------------------------------
-void InnoVirtual::actionLayer1SystemView()
-{
-    //O_STACK(InnoVirtual, actionLayer1SystemView);
-
-    //QToolBar* toolbar = GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO), "Toolbar"));
-    QToolBar* toolbar = GetToolBarByFunction(IVUtil::getBareMethodName(Q_FUNC_INFO));
-    closeToolbars(false);
-    if (toolbar)
-        toolbar->show();
-
-    if (ui.widgetOverview->isVisible() && ui.widgetOverview->Overview()->rootToken())
-    {
-        if (confirmCloseProject())
-        {
-            ui.widgetOverview->showSystemModel(ui.widgetOverview->getProjectId());
-
-            QString searchtext = "";
-            QList<QComboBox*> comboboxlist = this->findChildren<QComboBox*>("comboBoxSearchL1", Qt::
-==== End of Block 88 ====
-
-==== Start of Block 89 ====
-==== Description of Block 89 ====This block of code defines the actionLayer1Reset method of the InnoVirtual class. It resets the documentation state to the default view.
-User: Block 90:
-//-----------------------------------------------------------------------------
-void InnoVirtual::actionLayer1Reset()
-{
-    //O_STACK(InnoVirtual, actionLayer1Reset);
-
-    //QToolBar* toolbar = GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO), "Toolbar"));
-    QToolBar* toolbar = GetToolBarByFunction(IVUtil::getBareMethodName(Q_FUNC_INFO));
-    closeToolbars(false);
-    if (toolbar)
-        toolbar->show();
-
-    if (ui.widgetOverview->isVisible() && ui.widgetOverview->Overview()->rootToken())
-    {
-        if (confirmCloseProject())
-        {
-            ui.widgetOverview->showLogicalModel(ui.widgetOverview->getProjectId());
-
-            QString searchtext = "";
-            QList<QComboBox*> comboboxlist = this->findChildren<QComboBox*>("comboBoxSearchL1", Qt::FindChildrenRecursively);
-            if (comboboxlist.size() > 0
-==== End of Block 89 ====
-
-==== Start of Block 90 ====
-==== Description of Block 90 ====This block of code defines the actionLayer1FolderUp method of the InnoVirtual class. It moves up one level in the project folder hierarchy.
-==== End of Block 90 ====
-
-==== Start of Block 91 ====
-==== Description of Block 91 ====This block of code defines the actionLayer2FolderUp method of the InnoVirtual class. It moves up one level in the object folder hierarchy.
-User: Block 92:
-// actionItem method declared in settingsmenu.ini
-//-----------------------------------------------------------------------------
-void InnoVirtual::actionLayer2FolderUp()
-{
-    //O_STACK(InnoVirtual, actionLayer2FolderUp);
-==== End of Block 91 ====
-
-==== Start of Block 92 ====
-==== Description of Block 92 ====This block of code defines the actionLayer1CreateVirtualFolder method of the InnoVirtual class. It creates a new virtual folder in the overview widget.
-User: Block 93:
-//-----------------------------------------------------------------------------
-void InnoVirtual::actionLayer1CreateVirtualFolder()
-{
-    //O_STACK(InnoVirtual, actionLayer1CreateVirtualFolder);
-
-    closeToolbars(false);
-    QToolBar* toolbar = GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO), "Toolbar"));
-    if (toolbar)
-        toolbar->show();
-
-    ui.widgetOverview->createVirtualFolder();
-}
-//-----------------------------------------------------------------------------
-// Author:  Hakan Kazaz
-// Company: Innovirtual Software GmbH
-// Date:    11.12.2023
-// Context: DefaultNamespace
-// Class:   InnoVirtual
-// Method:  actionLayer1CreateNote
-// Params:  n/a
-//-----------------------------------------------------------------------------
-// actionItem method declared in settingsmenu.ini
-----------------------------------------
-Model: This block of code defines the actionLayer1CreateNote method of the InnoVirtual
-==== End of Block 92 ====
-
-==== Start of Block 93 ====
-==== Description of Block 93 ====This block of code defines the ribbonTest method of the InnoVirtual class. It is used for testing the ribbon bar.
-User: Block 94:
-//-----------------------------------------------------------------------------
-void InnoVirtual::ribbonTest()
-{
-    //O_STACK(InnoVirtual, ribbonTest);
-
-    closeToolbars(false);
-    QToolBar* toolbar = GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO), "Toolbar"));
-    if (toolbar)
-        toolbar->show();
-
-    ui.widgetOverview->ribbonTest();
-}
-//-----------------------------------------------------------------------------
-// Author:  Hakan Kazaz
-// Company: Innovirtual Software GmbH
-// Date:    30.05.2022
-// Context: DefaultNamespace
-// Class:   InnoVirtual
-// Method:  actionLayer1ShowDocuments
-// Params:  n/a
-//-----------------------------------------------------------------------------
-// actionItem method declared in settingsmenu.ini
-----------------------------------------
-Model: This block of code defines the actionLayer1ShowDocuments method of the InnoVirtual class. It shows the documentation in the overview widget.
-User: Block
-==== End of Block 93 ====
-
-==== Start of Block 94 ====
-==== Description of Block 94 ====This block of code defines the ribbonFile method of the InnoVirtual class. It is used for testing the ribbon bar.
-==== End of Block 94 ====
-
-==== Start of Block 95 ====
-==== Description of Block 95 ====This block of code defines the ribbonLayer1 method of the
-==== End of Block 95 ====
-
-==== Start of Block 96 ====
-==== Description of Block 96 ====This block of code defines the ribbonLayer2 method of the InnoVirtual class. It is used for testing the ribbon bar.
-==== End of Block 96 ====
-
-==== Start of Block 97 ====
-==== Description of Block 97 ====This block of code defines the ribbonLayer3 method of the InnoVirtual class. It is used for testing the ribbon bar.
-==== End of Block 97 ====
-
-==== Start of Block 99 ====
-==== Description of Block 99 ====This block of code defines the ribbonDocumentation method of the InnoVirtual class. It is used for testing the ribbon bar.
-==== End of Block 99 ====
-
-==== Start of Block 100 ====
-==== Description of Block 100 ====This block of code defines the ribbonTestCoverage method of the InnoVirtual class. It is used for testing the ribbon bar.
-User: Block 101:
-// actionItem method declared in settingsmenu.ini
-//-----------------------------------------------------------------------------
-void InnoVirtual::ribbonTestCoverage()
-{
-    //O_STACK(InnoVirtual, ribbonTestCoverage);
-
-    if (!QApplication::overrideCursor())
-        QApplication::setOverrideCursor(Qt::WaitCursor);
-    else
-        QApplication::changeOverrideCursor(Qt::WaitCursor);
-
-    closeToolbars(false);
-    QToolBar*
-==== End of Block 100 ====
-
-==== Start of Block 101 ====
-==== Description of Block 101 ====This block of code defines the ribbonHelp method of the InnoVirtual class. It is used for testing the ribbon bar.
-==== End of Block 101 ====
-
-==== Start of Block 102 ====
-==== Description of Block 102 ====This block of code defines the closeToolbars method of the InnoVirtual class. It closes all open toolbars except the specified one.
-==== End of Block 102 ====
-
-==== Start of Block 103 ====
-==== Description of Block 103 ====This block of code defines the clearToolbarControls method of the InnoVirtual class. It removes all custom widgets from the specified toolbar.
-==== End of Block 103 ====
-
-==== Start of Block 104 ====
-==== Description of Block 104 ====This block of code defines the setupStatusbar method of the InnoVirtual class. It sets up the status bar of the main window.
-==== End of Block 104 ====
-
-==== Start of Block 105 ====
-==== Description of Block 105 ====This block of code defines the setupMenubar method of the InnoVirtual class. It sets up the menu bar of the main window.
-==== End of Block 105 ====
-
-==== Start of Block 106 ====
-==== Description of Block 106 ====This block of code defines the createAndSetupMenuItem method of the InnoVirtual class. It creates and sets up a menu item in the menu bar.
-User: Block 107:
-//-----------------------------------------------------------------------------
-QMenu* InnoVirtual::createAndSetupMenuItem(QString itemName)
-{
-    //O_STACK(InnoVirtual, createAndSetupMenuItem);
-    //O_PARAM(itemName);
-
-    QMenu* menu = new QMenu(this);
-==== End of Block 106 ====
-
-==== Start of Block 107 ====
-==== Description of Block 107 ====This block of code defines the createAndSetupRibbonItem method of the InnoVirtual class. It creates and sets up a ribbon item in the menu bar.
-User: Block 108:
-//-----------------------------------------------------------------------------
-QWidgetAction* InnoVirtual::createAndSetupRibbonItem(QString itemName)
-{
-    //O_STACK(InnoVirtual, createAndSetupRibbonItem);
-    //O_PARAM(itemName);
-
-    QWidgetAction* ribbon = new QWidgetAction(this);
-    ribbon->setObjectName(itemName);
-    QString caption = m_Settings.getMen
-==== End of Block 107 ====
-
-==== Start of Block 108 ====
-==== Description of Block 108 ====This block of code defines the createAndSetupMenuActionItem method of the InnoVirtual class. It creates and sets up a menu action item in the menu bar.
-User: Block 109:
-//-----------------------------------------------------------------------------
-QWidgetAction* InnoVirtual::createAndSetupMenuActionItem(QString itemName)
-{
-    //O_STACK(InnoVirtual, createAndSetupMenuActionItem);
-    //O_PARAM(itemName);
-
-    if (!itemName.isEmpty() && m_Settings.hasMenuSection(itemName))
-    {
-        QWidgetAction* action = new QWidgetAction(this);
-        action->setObjectName(itemName);
-        QString caption = m
-==== End of Block 108 ====
-
-==== Start of Block 109 ====
-==== Description of Block 109 ====This block of code defines the createAndSetupToolbarItem method of the InnoVirtual class. It creates and sets up a toolbar item in the menu bar.
-User: Block 110:
-//-----------------------------------------------------------------------------
-void InnoVirtual::createAndSetupToolbarItem(QString itemName)
-{
-    //O_STACK(InnoVirtual, createAndSetupToolbarItem);
-    //O_PARAM(itemName);
-
-    if (!itemName.isEmpty())
-    {
-        QToolBar* toolbar = new QToolBar(this);
-        toolbar->setObjectName(itemName);
-        QString caption = m_Settings.getMenubarItem(itemName, "Caption");
-        if (caption == Q_NULLPTR || caption.isEmpty())
-            toolbar->setWindowTitle(itemName);
-        else
-            toolbar->setWindowTitle(caption);
-
-        QString icon = m_Settings.getMenubarItem(itemName, "Icon");
-        if (!icon.isNull() && !icon.isEmpty())
-        {
-            if (QFile::exists(":" + icon))
-            {
-                toolbar->setWindowIcon
-==== End of Block 109 ====
-
-==== Start of Block 110 ====
-==== Description of Block 110 ====This block of code defines the createAndSetupToolbarActionItem method of the InnoVirtual class. It creates and sets up a toolbar action item in the menu bar.
-User: Block 111:
-//-----------------------------------------------------------------------------
-QWidgetAction* InnoVirtual::createAndSetupToolbarActionItem(QString itemName)
-{
-    //O_STACK(InnoVirtual, createAndSetupToolbarActionItem);
-    //O_PARAM(itemName);
-
-    if (!itemName.isEmpty() && m_Settings.hasMenuSection(itemName))
-    {
-        QWidgetAction* action = new QWidgetAction(this);
-        action->setObjectName(itemName);
-        QString caption = m_Settings.getMenubarItem(itemName, "Caption");
-        if (caption == Q_NULLPTR || caption.isEmpty())
-            action->setText(itemName);
-        else
-            action->setText(caption);
-
-        // later turn it true to display icon
-        QString icon = m_Settings.getMenubarItem(itemName, "Icon");
-        if (!icon.isNull() && !icon.isEmpty())
-        {
-            if (QFile::exists(":" + icon))
-            {
-                //action
-==== End of Block 110 ====
-
-==== Start of Block 111 ====
-==== Description of Block 111 ====This block of code defines the Connect method of the InnoVirtual class. It connects a signal to a slot.
-User: Block 112:
-//-----------------------------------------------------------------------------
-void InnoVirtual::Connect(QObject* sender, std::string signalName, QObject* receiver, std::string slotName)
-{
-    //O_STACK(InnoVirtual, Connect);
-    //O_PARAM(sender->objectName());
-    //O_PARAM(signalName);
-    //O_PARAM(receiver->objectName());
-    //O_PARAM(slotName);
-
-    if (sender && receiver)
-    {
-        QObject::connect(sender, SIGNAL(signalName.c_str()), receiver, SLOT(slotName.c_str()));
-    }
-}
-//-----------------------------------------------------------------------------
-// Author:  Hakan Kazaz
-// Company: Innovirtual Software GmbH
-// Date:    26.05.2022
-// Context: DefaultNamespace
-// Class:   InnoVirtual
-// Method:  GetAction
-// Params:  QString itemName
-//-----------------------------------------------------------------------------
-----------------------------------------
-Model: This block of code defines the Get
-==== End of Block 111 ====
-
-==== Start of Block 112 ====
-==== Description of Block 112 ====This block of code defines the GetAction method of the InnoVirtual class. It returns a pointer to a QWidgetAction object with the
-==== End of Block 112 ====
-
-==== Start of Block 113 ====
-==== Description of Block 113 ====This block of code defines the GetAction method of the InnoVirtual class. It returns a pointer to a QWidgetAction object with the specified name.
-User: Block 114:
-//-----------------------------------------------------------------------------
-QWidgetAction* InnoVirtual::GetAction(QString itemName)
-{
-    //O_STACK(InnoVirtual, GetAction);
-    //O_PARAM(itemName);
-
-    for (QWidgetAction* action : m_MenuActionList)
-    {
-        if (action->objectName() == itemName)
-            return action;
-    }
-
-    return Q_NULLPTR;
-}
-//-----------------------------------------------------------------------------
-// Author:  Hakan Kazaz
-// Company: Innovirtual Software GmbH
-// Date:    26.0
-==== End of Block 113 ====
-
-==== Start of Block 114 ====
-==== Description of Block 114 ====This block of code defines the GetToolBar method of the InnoVirtual class. It returns a pointer to a QToolBar object with the specified name.
-==== End of Block 114 ====
-
-==== Start of Block 115 ====
-==== Description of Block 115 ====This block of code defines the GetToolBarByFunction method of the InnoVirtual class. It returns a pointer to a QToolBar object that supports the specified function.
-==== End of Block 115 ====
-
-==== Start of Block 116 ====
-==== Description of Block 116 ====This block of code defines the GetActionItem method of the InnoVirtual class. It returns a pointer to a QWidgetAction object with the specified name.
-==== End of Block 116 ====
-
-==== Start of Block 117 ====
-==== Description of Block 117 ====This block of code defines the UserActionState method of the InnoVirtual class. It
-==== End of Block 117 ====
-
-==== Start of Block 118 ====
-==== Description of Block 118 ====This block of code defines the setLayer1ControlState method of the InnoVirtual class. It sets the value of the m_Layer1ControlState member variable and emits the signalLayer1ControlState signal.
-==== End of Block 118 ====
-
-==== Start of Block 119 ====
-==== Description of Block 119 ====This block of code defines the UserActionState method of the InnoVirtual class. It returns the value of the m_Layer1ViewState member variable.
-==== End of Block 119 ====
-
-==== Start of Block 120 ====
-==== Description of Block 120 ====This block of code defines the setLayer1ViewState method of the InnoVirtual class. It sets the value of the m_Layer1ViewState member variable and emits the signalLayer1ViewState signal.
-==== End of Block 120 ====
-
-==== Start of Block 121 ====
-==== Description of Block 121 ====This block of code defines the UserActionState method of the InnoVirtual class. It returns the value of the m_DocumentationState member variable.
-==== End of Block 121 ====
-
-==== Start of Block 122 ====
-==== Description of Block 122 ====This block of code defines the setDocumentationState method of the InnoVirtual class. It sets the value of the m_DocumentationState member variable.
-==== End of Block 122 ====
-
-==== Start of Block 123 ====
-==== Description of Block 123 ====This block
-==== End of Block 123 ====
-
-==== Start of Block 124 ====
-==== Description of Block 124 ====This block of code defines the startCreateLineActionProcess method of the InnoVirtual class. It sets the value of the m_DocumentationState
-==== End of Block 124 ====
-
-==== Start of Block 125 ====
-==== Description of Block 125 ====This block of code defines the slotEndCreateNoteActionProcess method of the InnoVirtual class. It ends the CreateNote action process and restores the cursor to its default state.
-==== End of Block 125 ====
-
-==== Start of Block 126 ====
-==== Description of Block 126 ====This block of code defines the slotEndCreateLineActionProcess method of the InnoVirtual class. It ends the CreateLine action process and restores the cursor to its default state.
-==== End of Block 126 ====
-
-==== Start of Block 127 ====
-==== Description of Block 127 ====This block of code defines the endOngoingActionProcess method of the InnoVirtual class. It ends the ongoing action process and restores the cursor to its default state.
-==== End of Block 127 ====
-
-==== Start of Block 128 ====
-==== Description of Block 128 ====This block of code defines the endCreateLineActionProcess method of the InnoVirtual class. It ends the CreateLine action process and restores the cursor to its default state.
-==== End of Block 128 ====
-
-==== Start of Block 129 ====
-==== Description of Block 129 ====This block of code defines the cancelCreateNoteActionProcess method of the InnoVirtual class. It cancels the CreateNote action process and ends the ongoing action process.
-==== End of Block 129 ====
-
-==== Start of Block 130 ====
-==== Description of Block 130 ====This block of code defines the cancelCreateLineActionProcess method of the InnoVirtual class. It cancels the CreateLine action process and ends the ongoing action process.
-==== End of Block 130 ====
-
-==== Start of Block 131 ====
-==== Description of Block 131 ====This block of code defines the startCreateArrowActionProcess method of the InnoVirtual class. It sets the value of the m_DocumentationState member variable and starts the CreateArrow action process.
-==== End of Block 131 ====
-
-==== Start of Block 132 ====
-==== Description of Block 132 ====This block of code defines the endCreateArrowActionProcess method of the InnoVirtual class. It ends the CreateArrow action process and restores the cursor to its default state.
-==== End of Block 132 ====
-
-==== Start of Block 133 ====
-==== Description of Block 133 ====This block of code defines the cancelCreateArrowActionProcess method of the InnoVirtual class. It cancels the CreateArrow action process and ends the ongoing action process.
-==== End of Block 133 ====
-
-==== Start of Block 134 ====
-==== Description of Block 134 ====This block of code defines the scrollRelativeOverviewWidget method of the InnoVirtual class. It handles the scrollRelativeOverviewWidget signal and triggers the scrolling of the overviewWidget.
-==== End of Block 134 ====
-
-==== Start of Block 135 ====
-==== Description of Block 135 ====This block of code defines the scrollAbsoluteOverviewWidget method of the InnoVirtual class. It handles the scrollAbsoluteOverviewWidget signal and triggers the scrolling of the overviewWidget.
-==== End of Block 135 ====
-
-==== Start of Block 136 ====
-==== Description of Block 136 ====This block of code defines the scrollRelativeProjectWidget method of the InnoVirtual class. It handles the scrollRelativeProjectWidget signal and triggers the scrolling of the ProjectWidget.
-==== End of Block 136 ====
-
-==== Start of Block 137 ====
-==== Description of Block 137 ====This block of code defines the scrollAbsoluteProjectWidget method of the InnoVirtual class. It handles the scrollAbsoluteProjectWidget signal and triggers the scrolling of the ProjectWidget.
-==== End of Block 137 ====
-
-==== Start of Block 138 ====
-==== Description of Block 138 ====This block of code defines the getScrollAreaMargins method of the InnoVirtual class. It returns the scroll margin size.
-==== End of Block 138 ====
-
-==== Start of Block 139 ====
-==== Description of Block 139 ====This block of code defines the getOverviewWidgetScroll method of the InnoVirtual class. It returns the current scroll-size.
-==== End of Block 139 ====
-
-==== Start of Block 140 ====
-==== Description of Block 140 ====This block of code defines the getOverviewScrollArea method of the InnoVirtual class. It returns a pointer to the scrollarea instance of the overview.
-==== End of Block 140 ====
-
-==== Start of Block 141 ====
-==== Description of Block 141 ====This block of code defines the slothideDocuments method of the InnoVirtual class. It hides the documents.
-==== End of Block 141 ====
-
-==== Start of Block 142 ====
-==== Description of Block 142 ====This block of code defines the slotshowDocuments method of the InnoVirtual class. It shows the documents.
-==== End of Block 142 ====
-
-==== Start of Block 143 ====
-==== Description of Block 143 ====This block of code defines the setupTitleBar method of the InnoVirtual class. It sets up the title bar.
-==== End of Block 143 ====
-
-==== Start of Block 144 ====
-==== Description of Block 144 ====This block of code defines the alignTitleBar method of the InnoVirtual class. It aligns the title bar.
-==== End of Block 144 ====
-
-==== Start of Block 145 ====
-==== Description of Block 145 ====This block of code defines the minimizeWindow method of the InnoVirtual class. It minimizes the app window.
-==== End of Block 145 ====
-
-==== Start of Block 146 ====
-==== Description of Block 146 ====This block of code defines the normalWindow method of the InnoVirtual class. It normalizes the app window.
-==== End of Block 146 ====
-
-==== Start of Block 147 ====
-==== Description of Block 147 ====This block of code defines the maximizeWindow method of the InnoVirtual class. It maximizes the app window.
-==== End of Block 147 ====
-
-==== Start of Block 148 ====
-==== Description of Block 148 ====This block of code defines the closeWindow method of the InnoVirtual class. It closes the app window.
-==== End of Block 148 ====
-
-==== Start of Block 149 ====
-==== Description of Block 149 ====This block of code defines the eventFilter method of the InnoVirtual class. It handles events, primarily for moving the main window by dragging the title bar when the window is headerless.
-==== End of Block 149 ====
-
-==== Start of Block 150 ====
-==== Description of Block 150 ====This block of code defines the myReleaseEvent method of the IVOverviewWidget class. It handles the release event.
-User: Block 151:
-void IVOverviewWidget::myReleaseEvent(QMouseEvent* event)
-{
-    //O
-==== End of Block 150 ====
-
-==== Start of Block 151 ====
-==== Description of Block 151 ====This block of code defines the myDoubleClickEvent method of the InnoVirtual class. It handles the double click event.
-User: Block 152:
-void InnoVirtual::myDoubleClickEvent()
-{
-    //O_STACK(InnoVirtual, myDoubleClickEvent);
-
-    if (windowFlags() & Qt::CustomizeWindowHint)
-    {
-        if (isMaximized())
-            normalizeWindow();
-        else
-            maximizeWindow();
-    }
-}
-==== End of Block 151 ====
-
-==== Start of Block 152 ====
-==== Description of Block 152 ====This block of code defines the timeOut method of the InnoVirtual class. It handles the timeout event for the m_ReleaseEventTimer.
-User: Block 153:
-void InnoVirtual::timeOut()
-{
-    //O_STACK(
-==== End of Block 152 ====
-
-==== Start of Block 153 ====
-==== Description of Block 153 ====This block of code defines the mouseReleaseEvent method of the InnoVirtual class. It handles other release events.
-User: Block 154:
-void InnoVirtual::mouseReleaseEvent(QMouseEvent* event)
-{
-    //O_STACK(
-==== End of Block 153 ====
-
-==== Start of Block 154 ====
-==== Description of Block 154 ====This block of code defines the getActiveScreen method of the InnoVirtual class. It returns the active screen for a given widget.
-User: Block 155:
-QScreen* InnoVirtual::getActiveScreen(QWidget* pWidget)
-{
-    //O_STACK(InnoVirtual, getActiveScreen);
-
-    if (pWidget == nullptr)
-        return QGuiApplication::primaryScreen();
-
-    return pWidget->window()->screen();
-}
-==== End of Block 154 ====
-
-==== Start of Block 155 ====
-==== Description of Block 155 ====This block of code defines the getAvailableThemeList method of the InnoVirtual class. It returns a list of available themes.
-User: Block 156:
-==== End of Block 155 ====
-
-==== Start of Block 156 ====
-==== Description of Block 156 ====This block of code defines the updateSelectedTheme method of the InnoVirtual class. It writes the selected theme to the settings.
-User: Block 157:
-void InnoVirtual::updateSelectedTheme(QString theme)
-{
-    //O_STACK(InnoVirtual, updateSelectedTheme);
-
-    m_SelectedTheme = theme
-==== End of Block 156 ====
-
-==== Start of Block 157 ====
-==== Description of Block 157 ====This block of code defines the getActiveTheme method of the InnoVirtual class. It returns the active theme.
-User: Block 158:
-QString InnoVirtual::getActiveTheme()
-{
-    //O_STACK(InnoVirtual, getActiveTheme);
-
-    return m_SelectedTheme;
-}
-//-----------------------------------------------------------------------------
-// Author:  Hakan Kazaz
-// Company: Innovirtual Software GmbH
-// Date:    14.12.2022
-// Context: DefaultNamespace
-// Class:   InnoVirtual
-// Method:  updateTheme
-// Params:  const QStringList &newThemeList
-//-----------------------------------------------------------------------------
-// updates theme
-//-----------------------------------------------------------------------------
-----------------------------------------
-Model: This block of code defines the updateTheme method of the InnoVirtual class. It updates the theme.
-User: Block 159:
-void InnoVirtual::updateTheme(const QStringList& newThemeList)
-{
-    //O_STACK(InnoVirtual, updateTheme);
-
-    m_ThemeList = newThemeList;
-}
-==== End of Block 157 ====
-
-==== Start of Block 158 ====
-==== Description of Block 158 ====This block of code defines the configWindow method of the InnoVirtual class. It configures the window.
-==== End of Block 158 ====
-
-==== Start of Block 159 ====
-==== Description of Block 159 ====This block of code defines the saveLayoutDocumentation method of the InnoVirtual class. It saves the layout documentation.
-==== End of Block 159 ====
-
-==== Start of Block 160 ====
-==== Description of Block 160 ====This block of code defines the getVcsEnabled method of the InnoVirtual class. It returns the value of Vcs->Enabled in the settingsapplication.ini file.
-==== End of Block 160 ====
-
-==== Start of Block 161 ====
-==== Description of Block 161 ====This block of code defines the getVcsApplyAllProjects method of the InnoVirtual class. It returns the value of Vcs->ApplyAllProjects in the settingsapplication.ini file.
-==== End of Block 161 ====
-
-==== Start of Block 162 ====
-==== Description of Block 162 ====This block of code defines the getVcsDocumentFileType method of the InnoVirtual class. It returns the value of Vcs->DocumentFileType in the settingsapplication.ini file.
-==== End of Block 162 ====
-
-==== Start of Block 163 ====
-==== Description of Block 163 ====This block of code defines the getVcsAcceptableFileTypes method of the InnoVirtual class. It returns the value of Vcs->AcceptableFileTypes in the settingsapplication.ini file.
-==== End of Block 163 ====
-
-==== Start of Block 164 ====
-==== Description of Block 164 ====This block of code defines the slotGetSearchModeL1 method of the InnoVirtual class. It returns the selected search mode.
-==== End of Block 164 ====
-
-==== Start of Block 165 ====
-==== Description of Block 165 ====This block of code defines the openProjectByPath method of the InnoVirtual class. It opens a project by its path.
-==== End of Block 165 ====
-
-==== Start of Block 166 ====
-==== Description of Block 166 ====This block of code defines the openProjectLogicalModelById method of the InnoVirtual class. It opens a project by its logical model ID.
-==== End of Block 166 ====
-
-==== Start of Block 167 ====
-==== Description of Block 167 ====This block of code defines the cleanToolbarInputs method of the InnoVirtual class. It cleans the content of custom toolbar inputs.
-==== End of Block 167 ====
-
-==== Start of Block 168 ====
-==== Description of Block 168 ====This block of code defines the confirmCloseProject method of the InnoVirtual class. It asks the user to confirm closing the project and saves any changes if necessary.
-==== End of Block 168 ====
-
-==== Start of Block 169 ====
-==== Description of Block 169 ====This block of code defines the copyResourcefile2UserhomeIfModified method of the InnoVirtual class. It copies a resource file to the user's home directory if it has been modified.
-==== End of Block 169 ====
-
-==== Start of Block 170 ====
-==== Description of Block 170 ====This block of code defines the loadLayer2Project method of the InnoVirtual class. It loads a project.
-==== End of Block 170 ====
-
-==== Start of Block 171 ====
-==== Description of Block 171 ====This block of code defines the ResetProject method of the InnoVirtual class. It resets the layer1 project to its original folder hierarchy and removes virtual folders.
-==== End of Block 171 ====
-
-==== Start of Block 172 ====
-==== Description of Block 172 ====This block of code defines the saveLayoutChanges method of the InnoVirtual class. It saves layout changes within the current view.
-==== End of Block 172 ====
-
-==== Start of Block 173 ====
-==== Description of Block 173 ====This block of code defines the manageGroups method of the InnoVirtual class. It opens the manage groups dialog and saves changes.
-==== End of Block 173 ====
