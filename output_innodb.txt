@@ -1,0 +1,141 @@
+
+==== Start of Block 1 ====
+
+==== Description of Block 1 ====
+This code is part of a C++ class named `innodb` that is used for creating a graphical user interface (GUI) for interacting with a database.
+Let's break down the code block by block:
+
+**Block 1: Header Includes**
+```cpp
+#include <QMap>
+#include <QVector>
+
+#include "../../GUI/InnoDB/innodb.h"
+#include "../../Database/m_sqlite.h"
+#include "../../Common/IVUtil.h"
+```
+- This block includes several header files that provide access to different libraries and custom modules used in the program.
+
+**Block 2: Class Declaration and Constructor**
+```cpp
+class innodb : public QDialog
+{
+public:
+    innodb(QWidget *parent);
+    ~innodb();
+
+private:
+    Ui::innodb ui;
+};
+
+innodb::innodb(QWidget *parent)
+    : QDialog(parent)
+{
+    ui.setupUi(this);
+    // ...
+}
+
+innodb::~innodb()
+{
+    // ...
+}
+```
+- This code declares a class named `innodb` that inherits from `QDialog`, a class provided by the Qt framework for creating dialog windows.
+- The constructor `innodb(QWidget *parent)` initializes the class and sets up the user interface using the `setupUi` method.
+- The destructor `~innodb()` is responsible for cleaning up any resources allocated by the class.
+
+**Block 3: Event Handling and Database Connection**
+```cpp
+connect(ui.pushButtonConvertIniToSqlite, &QPushButton::clicked, this, &innodb::convertDB);
+connect(ui.pbGetButton, &QPushButton::clicked, this, &innodb::getData);
+```
+- This block connects the `clicked` signal of two push buttons (`pushButtonConvertIniToSqlite` and `pbGetButton`) to the corresponding methods (`convertDB` and `getData`) of the `innodb` class.
+- These methods are likely responsible for handling user interactions and performing database operations.
+
+**Block 4: `viewSets` Method**
+```cpp
+void innodb::viewSets()
+{
+    // ...
+}
+```
+- The `viewSets` method is responsible for populating a combo box (`comboBoxSets`) with distinct values from a database table.
+- It uses a SQL query
+==== End of Block 1 ====
+
+==== Start of Block 2 ====
+
+==== Description of Block 2 ====
+**Block 2: Database Connection and Query Execution**
+```cpp
+if (cl.connOpen(dbpath, cl.myDB))
+{
+    QSqlQuery QGroups(qryGroups);
+    while (QGroups.next())
+    {
+        ui.comboBoxGroups->addItem(QGroups.value(0).toString());
+    }
+}
+cl.connClose();
+```
+- This block establishes a connection to a database using the `connOpen` method of the `m_sqlite` class.
+- It then executes a SQL query (`qryGroups`) to retrieve distinct values for the `propGroup` column and populates a combo box (`comboBoxGroups`) with the results.
+- Finally, it closes the database connection.
+
+**Block 3: `showData` Method**
+```cpp
+void innodb::showData()
+{
+    // ...
+}
+```
+- The `showData` method is responsible for displaying data from the database in a table view (`tableViewSettings`).
+- It uses a SQL query to retrieve data based on the currently selected values in the `comboBoxSets` and `comboBoxGroups` combo boxes.
+- The results are then displayed in the table view using a `QSqlQueryModel`.
+
+**Block 4: `convertDB` Method**
+```cpp
+void innodb::convertDB()
+{
+    // ...
+}
+```
+- The `convertDB` method is likely responsible for converting data from an INI file format to a SQLite database.
+- It opens a connection to the database, reads data from an INI file, and then processes and inserts the data into the database.
+==== End of Block 2 ====
+
+==== Start of Block 3 ====
+
+==== Description of Block 3 ====
+**Block 3: Data Conversion and Insertion**
+```cpp
+for (int i = 0; i < sp.count(); i++) 
+{
+    // ...
+}
+```
+- This block processes the data read from the INI file line by line.
+- It extracts the group name and property name/value pairs from each line and inserts them into the database using SQL queries.
+- The `Q1` query object is used to execute the INSERT statements.
+
+**Block 4: `getData` Method**
+```cpp
+void innodb::getData()
+{
+    // ...
+}
+```
+- The `getData` method is responsible for retrieving all data from the `iniMain` table in the database.
+- It uses a SQL query (`qryAll`) to select all columns from the table.
+- The results are then processed and displayed in the user interface (not shown in the provided code).
+==== End of Block 3 ====
+
+==== Start of Block 4 ====
+
+==== Description of Block 4 ====
+**Block 4: Closing the Database Connection**
+```cpp
+cl.connClose();
+```
+- This line closes the database connection that was opened earlier in the `convertDB` method.
+==== End of Block 4 ====

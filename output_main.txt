@@ -1,0 +1,67 @@
+
+==== Start of Block 1 ====
+
+==== Description of Block 1 ====
+This block of code includes several header files and defines a namespace.
+
+- The first three lines include the Qt header files for the application, splash screen, and style factory.
+- The fourth line includes the header file for the InnoVirtual application class.
+- The fifth line includes the header file for the IVUtil class.
+- The sixth line includes the header file for the NCLog class.
+- The seventh line starts a namespace called DefaultNamespace.
+==== End of Block 1 ====
+
+==== Start of Block 2 ====
+
+==== Description of Block 2 ====
+This block of code defines the main function of the program.
+
+- The first line creates an instance of the QApplication class, which is the main application object in Qt.
+- The second line creates an instance of the InnoVirtual class, which is the main application class.
+- The third line sets up the logging system.
+If the user passes the "log" argument to the program, the logging system will write all debug and info messages to a file called "log.txt".
+==== End of Block 2 ====
+
+==== Start of Block 3 ====
+
+==== Description of Block 3 ====
+This block of code sets up the logging system and prints a list of the built-in styles available in Qt.
+
+- The first line creates a list of the command-line arguments passed to the program.
+- The second line checks if the list contains the "log" argument.
+If it does, the logging system is initialized.
+- The third line prints a list of the built-in styles available in Qt.
+==== End of Block 3 ====
+
+==== Start of Block 4 ====
+
+==== Description of Block 4 ====
+This block of code sets the style sheet for the application.
+
+- The first line sets the style sheet to the "windowsvista" style.
+- The second line sets the style sheet to the "ExcelOffice.qss" style sheet.
+==== End of Block 4 ====
+
+==== Start of Block 5 ====
+
+==== Description of Block 5 ====
+This block of code sets up the splash screen for the application.
+
+- The first line creates a QPixmap object from the "startscreen.png" image.
+- The second line creates a QSplashScreen object using the QPixmap object.
+- The third line shows the splash screen.
+- The fourth line processes all pending events in the application.
+- The fifth line creates an instance of the InnoVirtual class.
+- The sixth line shows the InnoVirtual dialog box.
+- The seventh line finishes the splash screen and displays the InnoVirtual dialog box.
+==== End of Block 5 ====
+
+==== Start of Block 6 ====
+
+==== Description of Block 6 ====
+This block of code starts the event loop for the application.
+
+- The app.exec() function starts the event loop and waits for events to occur.
+- When an event occurs, the event loop calls the appropriate event handler function to process the event.
+- The event loop continues to run until the application exits.
+==== End of Block 6 ====

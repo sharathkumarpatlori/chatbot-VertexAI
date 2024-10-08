@@ -1,0 +1,315 @@
+
+==== Start of Block 1 ====
+
+==== Description of Block 1 ====
+This block of code is the constructor of the DlgDocument class.
+It initializes the user interface (UI) of a dialog window for creating and editing documentation.
+Here's a brief explanation of what each part of the code does:
+
+1.
+`#include` Statements:
+   - These lines include necessary header files for the functionality of the dialog window.
+
+2.
+Class Definition:
+   - `DlgDocument` is a custom dialog class that inherits from `QDialog`.
+
+3.
+Constructor:
+   - The constructor `DlgDocument` takes an optional `QWidget* parent` parameter, which is the parent widget of the dialog.
+
+4.
+UI Setup:
+   - `ui->setupUi(this);` sets up the user interface elements defined in the `.ui` file.
+
+5.
+Window Title:
+   - `setWindowTitle(QCoreApplication::applicationName());` sets the title of the dialog window to the application name.
+
+6.
+Text Edit Widget:
+   - A `QTextEdit` widget named `textEditRemark` is created and added to the dialog.
+This widget will be used for editing the documentation text.
+
+7.
+Signal-Slot Connections:
+   - Several signal-slot connections are established to handle events related to the text edit widget, such as font and text format changes.
+
+8.
+Font and Text Formatting:
+   - Default font, font size, and color are set for the text edit widget.
+
+9.
+Context Menu:
+   - A custom context menu is set up for the text edit widget to provide additional formatting options.
+
+10.
+Additional UI Elements:
+    - Various UI elements like buttons, combo boxes, and a font color button are created and connected to their respective slots for handling formatting actions.
+
+11.
+Document Handling:
+    - The constructor can optionally take an `IVDocument* document` parameter, which represents the document being edited.
+
+12.
+Layout:
+    - The layout of the dialog window is set using a vertical layout.
+
+13.
+Property Settings:
+    - The `openExternalLinks` property of the text edit widget is set to `true` to allow opening external links.
+
+14.
+Child Widgets:
+    - The child widgets of the text edit widget are iterated over to find a specific widget named "QWidgetTextControl".
+
+In summary, this code sets up a dialog window with a text edit widget for creating and editing documentation, including various UI elements and formatting options
+==== End of Block 1 ====
+
+==== Start of Block 2 ====
+
+==== Description of Block 2 ====
+This block of code appears to be part of a custom dialog window for creating and editing documentation.
+Here's a brief explanation of what it does:
+
+1.
+It iterates over the child widgets of a `QWidgetTextControl` object, which is likely a custom widget used for text editing.
+
+2.
+For each child widget, it retrieves the property name and value using Qt's meta-object system.
+
+3.
+It sets the `openExternalLinks` property to `true` for the child widget, allowing external links to be opened when clicked.
+
+4.
+It enables mouse tracking for the child widget.
+
+5.
+It sets up a custom context menu for the text edit widget, allowing users to access additional formatting options.
+
+6.
+It stores the default text character format for later use.
+
+In summary, this code enhances the text editing capabilities of the dialog window by enabling external link opening, mouse tracking, and a custom context menu.
+==== End of Block 2 ====
+
+==== Start of Block 3 ====
+
+==== Description of Block 3 ====
+This block of code contains several event handlers for the custom dialog window used for creating and editing documentation.
+Here's a brief explanation of each function:
+
+1.
+`onBoldButtonClicked()`:
+   - Toggles the bold formatting for the selected text in the text edit widget.
+   - Updates the UI button style to indicate the current bold state.
+
+2.
+`onItalicButtonClicked()`:
+   - Toggles the italic formatting for the selected text in the text edit widget.
+   - Updates the UI button style to indicate the current italic state.
+
+3.
+`onRedoButtonClicked()`:
+   - Allows the user to redo the last undone action in the text edit widget.
+
+4.
+`onUndoButtonClicked()`:
+   - Allows the user to undo the last performed action in the text edit widget.
+
+5.
+`onUnderlineButtonClicked()`:
+   - Toggles the underline formatting for the selected text in the text edit widget.
+   - Updates the UI button style to indicate the current underline state.
+
+6.
+`onFontColorButtonClicked()`:
+   - Opens a color dialog to allow the user to choose a text color.
+   - Sets the selected color as the text color for the selected text.
+
+7.
+`onStrikeoutButtonClicked()`:
+   - Toggles the strikeout formatting for the selected text in the text edit widget.
+   - Updates the UI button style to indicate the current strikeout state.
+
+8.
+`onBulletlistButtonClicked()`:
+   - Attempts to add a bullet list to the selected text in the text edit widget.
+   - Handles potential exceptions that may occur during the operation.
+
+In summary, these event handlers provide various formatting options and editing capabilities for the text edit widget within the dialog window.
+==== End of Block 3 ====
+
+==== Start of Block 4 ====
+
+==== Description of Block 4 ====
+This block of code contains additional event handlers and functions for the custom dialog window:
+
+1.
+`onBulletlistButtonClicked()`:
+   - This function attempts to add a bullet list to the selected text in the text edit widget.
+   - It handles potential exceptions that may occur during the operation.
+
+2.
+`onCheckmarkButtonClicked()`:
+   - This function inserts a checkmark symbol ("✓") into the text edit widget at the current cursor position.
+
+3.
+`textFamily()`:
+   - This function is called when the user selects a font family from the font combo box.
+   - It sets the font family for the selected text in the text edit widget.
+
+4.
+`textSize()`:
+   - This function is called when the user selects a font size from the font size combo box.
+   - It sets the font size for the selected text in the text edit widget.
+
+5.
+`openLinkInputDialog()`:
+   - This function opens a dialog window to allow the user to input a URL.
+   - It then inserts a hyperlink with the specified URL into the text edit widget at the current cursor position.
+
+In summary, these functions provide additional formatting options, hyperlink insertion, and font selection capabilities for the text edit widget within the dialog window.
+==== End of Block 4 ====
+
+==== Start of Block 5 ====
+
+==== Description of Block 5 ====
+This block of code contains additional functions and classes for the custom dialog window:
+
+1.
+`textFamily()`:
+   - This function is called when the user selects a font family from the font combo box.
+   - It sets the font family for the selected text in the text edit widget.
+
+2.
+`textSize()`:
+   - This function is called when the user selects a font size from the font size combo box.
+   - It sets the font size for the selected text in the text edit widget.
+
+3.
+`openLinkInputDialog()`:
+   - This function opens a dialog window to allow the user to input a URL.
+   - It then inserts a hyperlink with the specified URL into the text edit widget at the current cursor position.
+
+4.
+`LinkInputDialog` class:
+   - This class represents a custom dialog window for entering text and a web address.
+   - It contains UI elements for entering the text and URL, and a submit button to insert the hyperlink.
+
+In summary, these functions and classes provide additional formatting options, hyperlink insertion, and font selection capabilities for the text edit widget within the dialog window.
+==== End of Block 5 ====
+
+==== Start of Block 6 ====
+
+==== Description of Block 6 ====
+This block of code contains additional functions and classes for the custom dialog window:
+
+1.
+`LinkInputDialog` class:
+   - This class represents a custom dialog window for entering text and a web address.
+   - It contains UI elements for entering the text and URL, and a submit button to insert the hyperlink.
+
+2.
+`insertClickableText()`:
+   - This function inserts a hyperlink with the specified text and URL into the text edit widget at the current cursor position.
+   - It also resets the text formatting to the default settings.
+
+3.
+`updateClickableText()`:
+   - This function updates the URL of an existing hyperlink in the text edit widget.
+   - It applies the new URL to the selected link and resets the text formatting to the default settings.
+
+4.
+`showContextMenu()`:
+   - This function displays a custom context menu for the text edit widget.
+   - It adds an additional "Edit Link" option when the cursor is over a hyperlink.
+
+In summary, these functions and classes provide additional hyperlink insertion, editing, and context menu options for the text edit widget within the dialog window.
+==== End of Block 6 ====
+
+==== Start of Block 7 ====
+
+==== Description of Block 7 ====
+This block of code contains additional functions and event handlers for the custom dialog window:
+
+1.
+`showContextMenu()`:
+   - This function displays a custom context menu for the text edit widget.
+   - It adds an additional "Edit Link" option when the cursor is over a hyperlink.
+
+2.
+`editLink()`:
+   - This function is triggered when the "Edit Link" option is selected from the context menu.
+   - It extracts the link text and URL from the selected hyperlink and opens a dialog window to edit them.
+
+3.
+`removeLink()`:
+   - This function is triggered when the "Remove Link" option is selected from the context menu.
+   - It removes the hyperlink from the selected text.
+
+In summary, these functions provide additional context menu options and hyperlink editing capabilities for the text edit widget within the dialog window.
+==== End of Block 7 ====
+
+==== Start of Block 8 ====
+
+==== Description of Block 8 ====
+This block of code contains additional functions and event handlers for the custom dialog window:
+
+1.
+`removeLink()`:
+   - This function is triggered when the "Remove Link" option is selected from the context menu.
+   - It removes the hyperlink from the selected text.
+
+2.
+`textFamily()`:
+   - This function is called when the user selects a font family from the font combo box.
+   - It sets the font family for the selected text in the text edit widget.
+
+3.
+`textSize()`:
+   - This function is called when the user selects a font size from the font size combo box.
+   - It sets the font size for the selected text in the text edit widget.
+
+4.
+`mergeFormatOnWordOrSelection()`:
+   - This function applies the specified text formatting to the selected text or the word at the cursor position.
+
+In summary, these functions provide additional hyperlink editing, font selection, and text formatting capabilities for the text edit widget within the dialog window.
+==== End of Block 8 ====
+
+==== Start of Block 9 ====
+
+==== Description of Block 9 ====
+This block of code contains additional event handlers and functions for the custom dialog window:
+
+1.
+`fontChanged()`:
+   - This function updates the font family and size combo boxes based on the currently selected
+==== End of Block 9 ====
+
+==== Start of Block 10 ====
+
+==== Description of Block 10 ====
+This block of code contains additional functions and event handlers for the custom dialog window:
+
+1.
+`confirmKeepChanges()`:
+   - This function checks if the content of the header or remark text edit widgets has changed since they were opened.
+   - If there are changes, it displays a confirmation dialog asking the user if they want to keep the changes.
+
+2.
+`keyPressEvent()`:
+   - This function
+==== End of Block 10 ====
+
+==== Start of Block 11 ====
+
+==== Description of Block 11 ====
+This block of code contains additional functions and event handlers for the custom dialog window:
+
+1.
+`mouseMoveEvent()`:
+   - This function checks if the mouse cursor is over a hyperlink in the text edit widget.
+   - If it is, it displays a tooltip with the hyperlink's URL.
+==== End of Block 11 ====

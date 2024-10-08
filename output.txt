@@ -1,697 +1,265 @@
 
 ==== Start of Block 1 ====
+
 ==== Description of Block 1 ====
-This line includes the contents of the <QFileDialog> header file into the current code.
+This block of code is the constructor of the `DlgDocument` class.
+It initializes the user interface (UI) of a dialog window for creating and editing documentation.
+Here's a brief explanation of what each part of the code does:
+
+- It includes necessary header files for the dialog window, such as `DlgDocument.h`, `ui_DlgDocument.h`, and others.
+
+- It defines the `DlgDocument` class, which inherits from `QDialog` and uses the `Ui::DlgDocument` class for its UI.
+
+- Inside the constructor:
+  - It sets up the UI elements using `setupUi(this)`.
+  - It sets the window title using `setWindowTitle()`.
+
+- It creates a new `QTextEdit` widget named `textEditRemark` and connects it to various signals and slots for handling text formatting and cursor position changes.
+
+- It sets the font and font size for the `textEditRemark` widget.
+
+- It populates the `cmbFontsize` combo box with standard font sizes.
+
+- It enables mouse tracking for the dialog window.
+
+- It sets up a custom context menu for the `textEditRemark` widget.
+
+- It initializes the `defaultTextCharFormat` variable with the current character format of the `textEditRemark` widget.
+
+- It creates another constructor for the `DlgDocument` class that takes an `IVDocument` object as an argument and initializes the dialog window with the provided document.
+
+- It connects various UI elements (buttons, combo boxes, etc.) to their respective slots for handling user interactions, such as bold, italic, underline, font color, strikeout, bullet list, and more.
+
+- It sets up the layout for the dialog window.
+
+- It hides the "Add URL" button (`btnUrl`) until its functionality is fully implemented.
+
+- It enables text interaction and link accessibility for the `textEditRemark` widget.
+
+- It iterates through the child objects of the `textEditRemark` widget to find the `QWidgetTextControl` object and access its properties.
+
+This code sets up the basic structure and functionality of the `DlgDocument` dialog window for creating and editing documentation, including UI initialization, text formatting, and handling user interactions.
 ==== End of Block 1 ====
 
 ==== Start of Block 2 ====
+
 ==== Description of Block 2 ====
-This line includes the contents of the <QDragEnterEvent> header file into the current code.
+This block of code is part of the constructor of the `DlgDocument` class.
+It iterates through the child objects of the `textEditRemark` widget to find the `QWidgetTextControl` object and access its properties.
+Here's a brief explanation of what it does:
+
+- It uses a `for` loop to iterate through the child objects of the `textEditRemark` widget.
+
+- For each child object, it gets the meta-properties using `metaObject()->property(i)` and stores them in the `metaproperty` variable.
+
+- It then gets the name of the property using `metaproperty.name()` and stores it in the `name` variable.
+
+- It gets the value of the property using `pObj->property(name)` and stores it in the `value` variable.
+
+- It prints the property name and value using `qDebug()`.
+
+- It sets the "openExternalLinks" property to `true` for the child object.
+
+- It tries to cast the child object to a `QWidgetTextControl` object using `dynamic_cast<QWidgetTextControl*>(pObj)`.
+If successful, it sets the "openExternalLinks" property to `true` and enables mouse tracking for the object.
+
+This code is used to enable certain properties and behaviors for the `QWidgetTextControl` object, which is responsible for handling text editing and formatting within the `textEditRemark` widget.
 ==== End of Block 2 ====
 
 ==== Start of Block 3 ====
+
 ==== Description of Block 3 ====
-This line includes the contents of the <QMimeData> header file into the current code.
+This block of code contains several event handlers for the UI elements of the `DlgDocument` class.
+Here's a brief explanation of each event handler:
+
+- `onBoldButtonClicked()`:
+  - Toggles the bold formatting for the selected text in the `textEditRemark` widget.
+  - Updates the UI button style to indicate the current bold state.
+
+- `onItalicButtonClicked()`:
+  - Toggles the italic formatting for the selected text in the `textEditRemark` widget.
+  - Updates the UI button style to indicate the current italic state.
+
+- `onRedoButtonClicked()`:
+  - Allows the user to redo the last undone action in the `textEditRemark` widget.
+
+- `onUndoButtonClicked()`:
+  - Allows the user to undo the last performed action in the `textEditRemark` widget.
+
+- `onUnderlineButtonClicked()`:
+  - Toggles the underline formatting for the selected text in the `textEditRemark` widget.
+  - Updates the UI button style to indicate the current underline state.
+
+- `onFontColorButtonClicked()`:
+  - Opens a color dialog to allow the user to choose a text color.
+  - Sets the selected color as the text color for the selected text in the `textEditRemark` widget.
+
+- `onStrikeoutButtonClicked()`:
+  - Toggles the strikeout formatting for the selected text in the `textEditRemark` widget.
+  - Updates the UI button style to indicate the current strikeout state.
+
+- `onBulletlistButtonClicked()`:
+  - Attempts to add a bullet list to the selected text in the `textEditRemark` widget.
+  - If the selected text is not already part of a list, it creates a new list.
+  - If the selected text is already part of a list, it adds the selected text to the existing list.
+
+These event handlers provide various text formatting options and editing capabilities for the user within the `DlgDocument` dialog window.
 ==== End of Block 3 ====
 
 ==== Start of Block 4 ====
+
 ==== Description of Block 4 ====
-This line includes the contents of the <QScreen> header file into the current code.
+This block of code contains two event handlers for the UI elements of the `DlgDocument` class:
+
+- `onBulletlistButtonClicked()`:
+  - Attempts to add a bullet list to the selected text in the `textEditRemark` widget.
+  - If the selected text is not already part of a list, it creates a new list.
+  - If the selected text is already part of a list, it adds the selected text to the existing list.
+
+- `onCheckmarkButtonClicked()`:
+  - Attempts to add or remove a checkmark symbol from the selected text in the `textEditRemark` widget.
+  - If the selected text is not already part of a list, it creates a new list with a checkmark symbol.
+  - If the selected text is already part of a list, it removes the checkmark symbol from the list.
+
+These event handlers provide additional formatting options for the user within the `DlgDocument` dialog window.
 ==== End of Block 4 ====
 
 ==== Start of Block 5 ====
+
 ==== Description of Block 5 ====
-This line includes the contents of the <QScrollBar> header file into the current code.
+This block of code contains two methods:
+
+- `openLinkInputDialog()`:
+  - Opens a custom dialog window for the user to enter text and a web address.
+  - Stores the current cursor position and selected text in the `DlgDocument` class.
+  - Sets the initial values of the text and URL input fields in the dialog window based on the selected text and anchor href.
+  - Connects the "linkSubmitted" signal from the dialog window to the `insertClickableText()` or `updateClickableText()` method of the `DlgDocument` class, depending on whether the selected text is already a clickable link or not.
+
+- `LinkInputDialog()`:
+  - Constructor for the `LinkInputDialog` class, which is a custom dialog window for entering text and a web address.
+  - Sets up the UI elements and layout of the dialog window, including labels, input fields, and a submit button.
+  - Connects the "linkSubmitted" signal to a slot that handles the user's input and emits the signal with the entered text and URL.
+
+These methods provide a way for the user to add or edit clickable links within the `textEditRemark` widget of the `DlgDocument` dialog window.
 ==== End of Block 5 ====
 
 ==== Start of Block 6 ====
+
 ==== Description of Block 6 ====
-This line includes the contents of the <QPushButton> header file into the current code.
-User: Block 7:
+This block of code contains several methods and event handlers for the `DlgDocument` and `LinkInputDialog` classes:
+
+- `LinkInputDialog()`:
+  - Constructor for the `LinkInputDialog` class, which is a custom dialog window for entering text and a web address.
+  - Sets up the UI elements and layout of the dialog window, including labels, input fields, and a submit button.
+  - Connects the "linkSubmitted" signal to a slot that handles the user's input and emits the signal with the entered text and URL.
+
+- `onSubmitButtonClicked()`:
+  - Event handler for the submit button in the `LinkInputDialog`.
+  - Emits the "linkSubmitted" signal with the entered text and URL, and closes the dialog window.
+
+- `insertClickableText()`:
+  - Inserts clickable text with a specified URL into the `textEditRemark` widget of the `DlgDocument` class.
+  - Converts the URL to the "http" format if it doesn't start with "http".
+  - Resets the text formatting to the default format after inserting the clickable text.
+
+- `updateClickableText()`:
+  - Updates the URL of an existing clickable text in the `textEditRemark` widget.
+  - Creates a new text format with the edited URL and applies it to the selected link.
+  - Resets the text formatting to the default format after updating the clickable text.
+
+- `showContextMenu()`:
+  - Event handler for the custom context menu of the `textEditRemark` widget.
+  - Stores the current cursor position and retrieves the cursor at the specified position.
+  - Checks if the cursor is within a clickable link and adds an "Edit Link" option to the context menu if it is.
+
+These methods and event handlers provide functionality for inserting, updating, and editing clickable links within the `textEditRemark` widget of the `DlgDocument` dialog window.
 ==== End of Block 6 ====
 
 ==== Start of Block 7 ====
+
 ==== Description of Block 7 ====
-This line includes the contents of the <QFileDialog> header file into the current code.
+This block of code contains several methods and event handlers for the `DlgDocument` class:
+
+- `showContextMenu()`:
+  - Continued from the previous block, this method adds an "Edit URL" and "Remove URL" option to the custom context menu if the cursor is within a clickable link.
+  - Connects the "Edit URL" action to the `editLink()` method and the "Remove URL" action to the `removeLink()` method.
+
+- `editLink()`:
+  - Checks if the cursor is within a clickable link.
+  - Finds the start and end positions of the URL within the selected text.
+  - Extracts the link text and URL.
+  - Opens a `LinkInputDialog` to allow the user to edit the link.
+
+- `removeLink()`:
+  - Checks if the cursor is within a clickable link.
 ==== End of Block 7 ====
 
 ==== Start of Block 8 ====
+
 ==== Description of Block 8 ====
-This line includes the contents of the <QAction> header file into the current code.
+This block of code contains several methods and event handlers for the `DlgDocument` class:
+
+- `removeLink()`:
+  - Continued from the previous block, this method removes the URL link from the selected text.
+  - Finds the start and end positions of the URL within the selected text.
+  - Resets the text formatting to the default format for the selected text.
+
+- `textFamily()`:
+  - Sets the font family for the selected text or the current word.
+  - Merges the specified font family format with the current character format.
+
+- `textSize()`:
+  - Sets the font size for the selected text or the current word.
+  - Merges the specified font size format with the current character format.
+
+- `mergeFormatOnWordOrSelection()`:
+  - Helper method for merging a specified character format with the current character format of the selected text or the current word.
 ==== End of Block 8 ====
 
 ==== Start of Block 9 ====
+
 ==== Description of Block 9 ====
-This line includes the contents of the <QTextBrowser> header file into the current code.
+This block of code contains several event handlers and methods for the `DlgDocument` class:
+
+- `mergeFormatOnWordOrSelection()`:
+  - Continued from the previous block, this method merges the specified character format with the current character format of the selected text or the current word.
+
+- `fontChanged()`:
+  - Updates the font family and font size combo boxes based on the specified font.
+
+- `colorChanged()`:
+  - Updates the text color action icon based on the specified color.
+
+- `alignmentChanged()`:
+  - Updates the alignment action buttons based on the specified alignment.
+
+- `currentCharFormatChanged()`:
+  - Updates the font family, font size, and text color based on the specified character format.
+
+- `cursorPositionChanged()`:
+  - Updates the alignment action buttons, bullet list style combo box, and checkmark action button based on the current cursor position and text format.
 ==== End of Block 9 ====
 
 ==== Start of Block 10 ====
+
 ==== Description of Block 10 ====
-This line includes the contents of the <QMenu> header file into the current code.
+This block of code contains several methods and event handlers for the `DlgDocument` class:
+
+- `confirmKeepChanges()`:
+  - Prompts the user to confirm keeping changes if the header or remark text has been modified.
+
+- `keyPressEvent()`:
+  - Handles key press events, including shortcuts for bold, italic, underline, strikeout, and opening the link input dialog.
+
+- `mouseMoveEvent()`:
+  - Handles mouse move events and displays a tooltip with the URL if the cursor is hovering over a clickable link.
 ==== End of Block 10 ====
 
 ==== Start of Block 11 ====
+
 ==== Description of Block 11 ====
-This line includes the contents of the <QComboBox> header file into the current code.
+This block of code contains the remaining part of the `mouseMoveEvent()` method for the `DlgDocument` class:
+
+- `mouseMoveEvent()`:
+  - Continued from the previous block, this method displays a tooltip with the URL if the cursor is hovering over a clickable link.
 ==== End of Block 11 ====
-
-==== Start of Block 12 ====
-==== Description of Block 12 ====
-This line includes the contents of the <QFile> header file into the current code.
-==== End of Block 12 ====
-
-==== Start of Block 13 ====
-==== Description of Block 13 ====
-This line includes the contents of the <QLabel> header file into the current code.
-==== End of Block 13 ====
-
-==== Start of Block 14 ====
-==== Description of Block 14 ====
-This line includes the contents of the <QAction> header file into the current code.
-==== End of Block 14 ====
-
-==== Start of Block 15 ====
-==== Description of Block 15 ====
-This line includes the
-==== End of Block 15 ====
-
-==== Start of Block 16 ====
-==== Description of Block 16 ====
-This line includes the contents of the <QKeyEvent> header file into the current code.
-==== End of Block 16 ====
-
-==== Start of Block 17 ====
-==== Description of Block 17 ====
-This line includes the contents of the <QPushButton> header file into the current code.
-==== End of Block 17 ====
-
-==== Start of Block 18 ====
-==== Description of Block 18 ====
-This line includes the contents of the <QAction> header file into the current code.
-==== End of Block 18 ====
-
-==== Start of Block 19 ====
-==== Description of Block 19 ====
-This line includes the contents of the <QToolBar> header file into the current code.
-==== End of Block 19 ====
-
-==== Start of Block 20 ====
-==== Description of Block 20 ====
-This line includes the contents of the <QDialog> header file into the current code.
-==== End of Block 20 ====
-
-==== Start of Block 21 ====
-==== Description of Block 21 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 21 ====
-
-==== Start of Block 22 ====
-==== Description of Block 22 ====
-This line includes the contents of the <QDialog> header file into the current code.
-==== End of Block 22 ====
-
-==== Start of Block 23 ====
-==== Description of Block 23 ====
-This line includes the contents of the <QAction> header file into the current code.
-User: Block 24:
-voidInnoVirtual::actionLayer1ShowDocuments()
-{
-//O_STACK(InnoVirtual,actionLayer1ShowDocuments);
-
-closeToolbars(false);
-QToolBar*toolbar=GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO),"Toolbar"));
-if(toolbar)
-toolbar->show();
-
-showDocuments();
-}
-//-----------------------------------------------------------------------------
-//Author:HakanKazaz
-//Company:InnovirtualSoftwareGmbH
-//Date:30.05.2022
-//Context:DefaultNamespace
-//Class:InnoVirtual
-//Method:actionLayer1ShowOriginalView
-//Params:n/a
-//-----------------------------------------------------------------------------
-//actionItemmethoddeclaredinsettingsmenu.ini
-//-----------------------------------------------------------------------------
-voidInnoVirtual::actionLayer1ShowOriginalView()
-{
-//O_STACK(InnoVirtual,actionLayer1ShowOriginalView);
-
-closeToolbars(false);
-QToolBar*toolbar=GetToolBar(m_Settings.getMenubarItem
-==== End of Block 23 ====
-
-==== Start of Block 24 ====
-==== Description of Block 24 ====
-This line includes the contents of the <QMessageBox> header file into the current code.
-==== End of Block 24 ====
-
-==== Start of Block 25 ====
-==== Description of Block 25 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 25 ====
-
-==== Start of Block 26 ====
-==== Description of Block 26 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User: Block 27:
-//Company:InnovirtualSoftwareGmbH
-//Date:21.10.2022
-//Context:DefaultNamespace
-//Class:InnoVirtual
-//Method:actionLayer1ZoomIn
-//Params:n/a
-//-----------------------------------------------------------------------------
-//actionItemmethoddeclaredinsettingsmenu.ini
-//-----------------------------------------------------------------------------
-voidInnoVirtual::actionLayer1ZoomIn()
-{
-//O_STACK(InnoVirtual,actionLayer1ZoomIn);
-
-//QToolBar*toolbar=GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO),"Toolbar"));
-QToolBar*toolbar=GetToolBarByFunction(IVUtil::getBareMethodName(Q_FUNC_INFO));
-closeToolbars(false);
-if(toolbar)
-toolbar->show();
-
-ZoomIn();
-}
-//-----------------------------------------------------------------------------
-//Author:HakanKazaz
-//Company:InnovirtualSoftwareGmbH
-//Date:21.10.2022
-//Context:DefaultNamespace
-//
-==== End of Block 26 ====
-
-==== Start of Block 27 ====
-==== Description of Block 27 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 27 ====
-
-==== Start of Block 28 ====
-==== Description of Block 28 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 28 ====
-
-==== Start of Block 29 ====
-==== Description of Block 29 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User: Block 30:
-//Method:actionZoomInL3
-//Params:n/a
-//-----------------------------------------------------------------------------
-//actionItemmethoddeclaredinsettingsmenu.ini
-//-----------------------------------------------------------------------------
-voidInnoVirtual::actionZoomInL3()
-{
-//O_STACK(InnoVirtual,actionZoomInL3);
-
-closeToolbars(false);
-QToolBar*toolbar=GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO),"Toolbar"));
-if(toolbar)
-toolbar->show();
-
-ZoomIn();
-}
-//-----------------------------------------------------------------------------
-//Author:HakanKazaz
-//Company:InnovirtualSoftwareGmbH
-//Date:21.10.2022
-//Context:DefaultNamespace
-//Class:InnoVirtual
-//Method:actionZoomOutL3
-//Params:n/a
-//-----------------------------------------------------------------------------
-//actionItemmethoddeclaredinsettingsmenu.ini
-//-----------------------------------------------------------------------------
-voidInnoVirtual::actionZoomOutL3()
-{
-==== End of Block 29 ====
-
-==== Start of Block 30 ====
-==== Description of Block 30 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User: Block 31:
-//Date:30.05.2022
-//Context:DefaultNamespace
-//Class:InnoVirtual
-//Method:actionAboutQt
-//Params:n/a
-//-----------------------------------------------------------------------------
-//actionItemmethoddeclaredinsettingsmenu.ini
-//-----------------------------------------------------------------------------
-voidInnoVirtual::actionAboutQt()
-{
-//O_STACK(InnoVirtual,actionAboutQt);
-
-QApplication::aboutQt();
-}
-//-----------------------------------------------------------------------------
-//Author:HakanKazaz
-//Company:InnovirtualSoftwareGmbH
-//Date:30.05.2022
-//Context:DefaultNamespace
-//Class:InnoVirtual
-//Method:actionAboutInnoVirtual
-//
-==== End of Block 30 ====
-
-==== Start of Block 31 ====
-==== Description of Block 31 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 31 ====
-
-==== Start of Block 32 ====
-==== Description of Block 32 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User: Block 33:
-//actionItemmethoddeclaredinsettingsmenu.ini
-//-----------------------------------------------------------------------------
-voidInnoVirtual::actionLayer1CreateVirtualFolder()
-{
-//O_STACK(InnoVirtual,actionLayer1CreateVirtualFolder);
-
-if(ui.widgetOverview->isVisible()&&ui.widgetOverview->Overview()->token().count()>0)
-{
-closeToolbars(false);
-QToolBar*toolbar=GetToolBar(m_Settings.getMenubarItem(IVUtil::getBareMethodName(Q_FUNC_INFO),"Toolbar"));
-if(toolbar)
-toolbar->show();
-
-DlgDocVirtualFolderdlgVFolder(this);
-intresult=dlgVFolder.exec();
-
-if(result)
-startCreateVirtualFolderActionProcess(dlgVFolder.getDesiredDoc());
-else
-endOngoingActionProcess();
-}
-}
-//-----------------------------------------------------------------------------
-//Author:HakanKazaz
-//Company:InnovirtualSoftwareGmbH
-//Date:30.05.20
-==== End of Block 32 ====
-
-==== Start of Block 33 ====
-==== Description of Block 33 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 33 ====
-
-==== Start of Block 34 ====
-==== Description of Block 34 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 34 ====
-
-==== Start of Block 35 ====
-==== Description of Block 35 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 35 ====
-
-==== Start of Block 36 ====
-==== Description of Block 36 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 36 ====
-
-==== Start of Block 37 ====
-==== Description of Block 37 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User: Block 38:
-//Method:createAndSetupMenuItem
-//Params:QStringitem
-//-----------------------------------------------------------------------------
-//createandsetupmenuitem
-//-----------------------------------------------------------------------------
-QMenu*InnoVirtual::createAndSetupMenuItem(QStringitem)
-{
-//O_STACK(InnoVirtual,createAndSetupMenuItem);
-//O_PARAM(item);
-
-QMenu*menu=newQMenu(this);
-menu->setObjectName(item);
-menu->setTitle(m_Settings.getMenuTitle(item));
-
-QStringListsubitems=m_Settings.getMenuSubItems(item).split(" ");
-for(QStringsubitem:subitems)
-{
-if(m_Settings.hasMenuSection(subitem))
-{
-if(subitem.startsWith("menu"))
-{
-QMenu*submenu=createAndSetupMenuItem(subitem);
-
-if(submenu)
-menu->addMenu(submenu);
-}
-elseif(subitem.startsWith("action"))
-{
-QAction*action=createAndSetupMenuActionItem(subitem);
-
-if(action)
-menu
-==== End of Block 37 ====
-
-==== Start of Block 38 ====
-==== Description of Block 38 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 38 ====
-
-==== Start of Block 39 ====
-==== Description of Block 39 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 39 ====
-
-==== Start of Block 40 ====
-==== Description of Block 40 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 40 ====
-
-==== Start of Block 41 ====
-==== Description of Block 41 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User: Block 42:
-//Context:DefaultNamespace
-//Class:InnoVirtual
-//Method:setLayer1ControlState
-//Params:IVEnum::EnumLayer1ControlStatevalue
-//-----------------------------------------------------------------------------
-//setterform_Layer1ControlState
-//-----------------------------------------------------------------------------
-voidInnoVirtual::setLayer1ControlState(IVEnum::EnumLayer1ControlStatevalue)
-{
-//O_STACK(InnoVirtual,setLayer1ControlState);
-//O_PARAM(value);
-
-m_Layer1ControlState=value;
-}
-//-----------------------------------------------------------------------------
-//Author:HakanKazaz
-//Company:InnovirtualSoftwareGmbH
-//Date:28.10.2022
-//Context:DefaultNamespace
-//Class:InnoVirtual
-//Method:UserActionState
-//Params:n/a
-//-----------------------------------------------------------------------------
-//getterform_Layer1ViewState
-//-----------------------------------------------------------------------------
-IVEnum::EnumLayer1ViewStateInnoVirtual::getLayer1ViewState()
-{
-//O_STACK(InnoVirtual,getLayer
-==== End of Block 41 ====
-
-==== Start of Block 42 ====
-==== Description of Block 42 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 42 ====
-
-==== Start of Block 43 ====
-==== Description of Block 43 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 43 ====
-
-==== Start of Block 44 ====
-==== Description of Block 44 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User: Block 45:
-//-----------------------------------------------------------------------------
-//endsgracefullyCreateLineactionprocess
-//-----------------------------------------------------------------------------
-voidInnoVirtual::slotEndCreateLineActionProcess()
-{
-//O_STACK(InnoVirtual,slotEndCreateLineActionProcess);
-
-//endingtaskshere..
-if(ui.widgetOverview->isVisible())
-{
-//canbeusedwhennoiconbutcaptiononly
-/*
-setBold(GetAction("actionLayer1CreateLine"),false);
-*/
-QApplication::restoreOverrideCursor();
-}
-}
-
-//-----------------------------------------------------------------------------
-//Author:HakanKazaz
-//Company:InnovirtualSoftwareGmbH
-//Date:01.08.2022
-//Context:DefaultNamespace
-//Class:InnoVirtual
-//Method:slotEndCreateVirtualFolderActionProcess
-//Params:n/a
-//-----------------------------------------------------------------------------
-//endsgracefullyCreateVirtualFolderactionprocess
-//-----------------------------------------------------------------------------
-voidInnoVirtual::slotEndCreateVirtualFolderActionProcess()
-{
-//O_STACK(InnoVirtual,slotEndCreate
-==== End of Block 44 ====
-
-==== Start of Block 45 ====
-==== Description of Block 45 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User: Block 46:
-//Class:InnoVirtual
-//Method:slotEndCreateVirtualFolderActionProcess
-//Params:n/a
-//-----------------------------------------------------------------------------
-//endsgracefullyCreateVirtualFolderactionprocess
-//-----------------------------------------------------------------------------
-voidInnoVirtual::slotEndCreateVirtualFolderActionProcess()
-{
-//O_STACK(InnoVirtual,slotEndCreateVirtualFolderActionProcess);
-
-//endingtaskshere..
-if(ui.widgetOverview->isVisible())
-{
-//canbeusedwhennoiconbutcaptiononly
-/*
-setBold(GetAction("actionLayer1CreateVirtualFolder"),false);
-*/
-QApplication::restoreOverrideCursor();
-}
-}
-
-//-----------------------------------------------------------------------------
-//Author:HakanKazaz
-//Company:InnovirtualSoftwareGmbH
-//Date:01.08.2022
-//Context:DefaultNamespace
-//Class:InnoVirtual
-//Method:endOngoingActionProcess
-//Params:n/a
-//-----------------------------------------------------------------------------
-//endsgracefullyCreateNoteactionprocess
-//-----------------------------------------------------------------------------
-voidInno
-==== End of Block 45 ====
-
-==== Start of Block 46 ====
-==== Description of Block 46 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User: Block 47:
-//Company:InnovirtualSoftwareGmbH
-//Date:01.08.2022
-//Context:DefaultNamespace
-//Class:InnoVirtual
-//Method:slotEndCreateArrowActionProcess
-//Params:n/a
-//-----------------------------------------------------------------------------
-//endsgracefullyCreateArrowactionprocess
-//-----------------------------------------------------------------------------
-voidInnoVirtual::slotEndCreateArrowActionProcess()
-{
-//O_STACK(InnoVirtual,slotEndCreateArrowActionProcess);
-
-//endingtaskshere..
-if(ui.widgetOverview->isVisible())
-{
-//canbeusedwhennoiconbutcaptiononly
-/*
-setBold(GetAction("actionLayer1CreateArrow"),false);
-*/
-QApplication::restoreOverrideCursor();
-}
-}
-
-//-----------------------------------------------------------------------------
-//Author:HakanKazaz
-//Company:InnovirtualSoftwareGmbH
-//Date:01.08.2022
-//Context:DefaultNamespace
-//Class:InnoVirtual
-//Method:startCreateTextActionProcess
-//Params:n/a
-//
-==== End of Block 46 ====
-
-==== Start of Block 47 ====
-==== Description of Block 47 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User: Block 48:
-{
-//O_STACK(InnoVirtual,scrollRelativeOverviewWidget);
-//O_PARAM(scrollMove);
-
-if(ui.widgetOverview->isVisible())
-{
-ui.widgetOverview->scrollRelative(scrollMove);
-}
-}
-//-----------------------------------------------------------------------------
-//Author:HakanKazaz
-//Company:InnovirtualSoftwareGmbH
-//Date:29.08.2022
-//Context:DefaultNamespace
-//Class:InnoVirtual
-//Method:scrollRelativeOverviewWidget
-//Params:QPointscrollMove
-//-----------------------------------------------------------------------------
-//scrollRelativeOverviewWidgetsignalhandlerfortriggeringoverviewWidgetscrolling
-//-----------------------------------------------------------------------------
-voidInnoVirtual::scrollRelativeOverviewWidget(QPointFscrollMove)
-{
-//O_STACK(InnoVirtual,scrollRelativeOverviewWidget);
-//O_PARAM(scrollMove);
-
-if(ui.widgetOverview->isVisible())
-{
-ui.widgetOverview->scrollRelative(scrollMove);
-}
-}
-//-----------------------------------------------------------------------------
-//Author:HakanKaza
-==== End of Block 47 ====
-
-==== Start of Block 48 ====
-==== Description of Block 48 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User: Block 49:
-//scrollAbsoluteProjectWidgetsignalhandlerfortriggeringProjectWidgetscrolling
-//-----------------------------------------------------------------------------
-voidInnoVirtual::scrollAbsoluteProjectWidget(QPointFscrollMove)
-{
-//O_STACK(InnoVirtual,scrollAbsoluteProjectWidget);
-
-QScrollBar*hsb=ui.scrollAreaProject->horizontalScrollBar();
-inthv=hsb->value();
-QScrollBar*vsb=ui.scrollAreaProject->verticalScrollBar();
-intvv=vsb->value();
-
-autohsbsize=hsb->size();
-autohsbsizehint=hsb->sizeHint();
-autohsbsizevisibile=hsb->isVisible();
-
-autovsbsize=vsb->size();
-autovsbsizehint=vsb->sizeHint();
-autovsbsizevisibile=vsb->isVisible();
-
-
-////qDebug()<<"innovirtual ("<<scrollMove.x()<<","<<scrollMove.y()<<")";
-ui.scrollAreaProject->horizontalScrollBar()->setValue(scrollMove.x());
-ui.scrollAreaProject->verticalScrollBar()->setValue(scrollMove
-==== End of Block 48 ====
-
-==== Start of Block 49 ====
-==== Description of Block 49 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User: Block 50:
-//Method:getOverviewWidgetScroll
-//Params:QPointscrollMove
-//-----------------------------------------------------------------------------
-//returnscurrentscroll-size
-//-----------------------------------------------------------------------------
-QPointFInnoVirtual::getOverviewWidgetScroll()
-{
-//O_STACK(InnoVirtual,getOverviewWidgetScroll);
-
-QScrollBar*hsb=ui.scrollAreaOverview->horizontalScrollBar();
-inthv=hsb->value();
-QScrollBar*vsb=ui.scrollAreaOverview->verticalScrollBar();
-intvv=vsb->value();
-
-autohsbsize=hsb->size();
-autohsbsizehint=hsb->sizeHint();
-autohsbsizevisibile=hsb->isVisible();
-
-autovsbsize=vsb->size();
-autovsbsizehint=vsb->sizeHint();
-autovsbsizevisibile=vsb->isVisible();
-
-QPointFs(0,0);
-if(hsbsizevisibile)
-s.setX(hv);
-if(vsbsizevisibile)
-s.setY(vv);
-==== End of Block 49 ====
-
-==== Start of Block 50 ====
-==== Description of Block 50 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-User
-==== End of Block 50 ====
-
-==== Start of Block 51 ====
-==== Description of Block 51 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 51 ====
-
-==== Start of Block 52 ====
-==== Description of Block 52 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 52 ====
-
-==== Start of Block 53 ====
-==== Description of Block 53 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 53 ====
-
-==== Start of Block 54 ====
-==== Description of Block 54 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 54 ====
-
-==== Start of Block 55 ====
-==== Description of Block 55 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 55 ====
-
-==== Start of Block 56 ====
-==== Description of Block 56 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 56 ====
-
-==== Start of Block 57 ====
-==== Description of Block 57 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 57 ====
-
-==== Start of Block 58 ====
-==== Description of Block 58 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 58 ====
-
-==== Start of Block 59 ====
-==== Description of Block 59 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 59 ====
-
-==== Start of Block 60 ====
-==== Description of Block 60 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 60 ====
-
-==== Start of Block 61 ====
-==== Description of Block 61 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 61 ====
-
-==== Start of Block 62 ====
-==== Description of Block 62 ====
-This line includes the contents of the <QMainWindow> header file into the current code.
-==== End of Block 62 ====

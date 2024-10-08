@@ -1,0 +1,60 @@
+
+==== Start of Block 1 ====
+
+==== Description of Block 1 ====
+Block 1:
+- The code is written in Java.
+- It defines a package named com.example.kk.Khadaka.HomePage.BuyNow.RecommendedProductsAdapter.
+- It imports several classes from the Android framework, including Context, LayoutInflater, View, ViewGroup, TextView, and RecyclerView.
+- The RecommendedProductsAdapter class extends the RecyclerView.Adapter class, which provides a binding from an app-specific data set to views that are displayed within a RecyclerView.
+==== End of Block 1 ====
+
+==== Start of Block 2 ====
+
+==== Description of Block 2 ====
+Block 2:
+- The code is written in Java.
+- It imports the L class from the com.airbnb.lottie package and the R class from the com.example.kk package.
+- It defines a public class named RecommendedAdapter that extends the RecyclerView.Adapter class.
+- The RecommendedAdapter class has a constructor that takes a Context object and a String array as parameters.
+- The onCreateViewHolder() method is overridden to create a new RecommendedViewHolder object.
+- The onCreateViewHolder() method takes a ViewGroup object and an int as parameters.
+- The onCreateViewHolder() method uses the LayoutInflater object to inflate the recommended_item_layout.xml layout file and create a View object.
+- The onCreateViewHolder() method returns a new RecommendedViewHolder object with the View object as a parameter.
+==== End of Block 2 ====
+
+==== Start of Block 3 ====
+
+==== Description of Block 3 ====
+Block 3:
+- The code is written in Java.
+- It defines a constructor for the RecommendedAdapter class.
+- The constructor takes a Context object and a String array as parameters.
+- The constructor assigns the Context object to the context field and the String array to the arr field.
+- The constructor calls the super() method to initialize the parent class.
+- The constructor returns a new RecommendedAdapter object.
+==== End of Block 3 ====
+
+==== Start of Block 4 ====
+
+==== Description of Block 4 ====
+Block 4:
+- The code is written in Java.
+- It overrides the onBindViewHolder() method of the RecyclerView.Adapter class.
+- The onBindViewHolder() method is called by the RecyclerView to display the data at a specific position.
+- The onBindViewHolder() method takes a RecommendedViewHolder object and an int as parameters.
+- The onBindViewHolder() method sets the text of the TextView object in the RecommendedViewHolder object to the String at the specified position in the arr array.
+- The onBindViewHolder() method returns a new RecommendedViewHolder object with the View object as a parameter.
+==== End of Block 4 ====
+
+==== Start of Block 5 ====
+
+==== Description of Block 5 ====
+Block 5:
+- The code is written in Java.
+- It defines a public class named RecommendedViewHolder that extends the RecyclerView.ViewHolder class.
+- The RecommendedViewHolder class has a constructor that takes a View object as a parameter.
+- The constructor assigns the View object to the itemView field.
+- The constructor calls the super() method to initialize the parent class.
+- The constructor returns a new RecommendedViewHolder object.
+==== End of Block 5 ====

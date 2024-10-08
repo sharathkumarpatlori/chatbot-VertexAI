@@ -17,6 +17,9 @@
 import tokenize
 from io import StringIO
 from vertexai.language_models import ChatModel, InputOutputTextPair
+import os
+import tkinter as tk
+from tkinter import filedialog
 
 def read_file(file_path):
     # Open the source file and return the contents
@@ -34,94 +37,70 @@ def tokenize_code(code):
         print(f"TokenError: {e}")
         return []
 
-def split_into_blocks(tokens, num_blocks):
-    blocks = []
-    current_block = []
-    current_indent = 0
-
-    for token in tokens:
-        token_type, token_string, (start_row, start_col), (end_row, end_col), line = token
-
-        if token_type == tokenize.INDENT:
-            current_indent += 1
-        elif token_type == tokenize.DEDENT:
-            current_indent -= 1
-
-        current_block.append(token)
-
-        if token_type == tokenize.NEWLINE and current_indent == 0:
-            blocks.append(current_block)
-            current_block = []
-
-    if current_block:
-        blocks.append(current_block)
-
-    # Merge blocks into the desired number of parts
-    merged_blocks = []
-    block_size = max(1, len(blocks) // num_blocks)
-
-    for i in range(0, len(blocks), block_size):
-        merged_blocks.append([token for sublist in blocks[i:i + block_size] for token in sublist])
-
-    # If the last block is empty, remove it
-    if not merged_blocks[-1]:
-        merged_blocks.pop()
-
-    # Ensure we only have the specified number of blocks
-    while len(merged_blocks) < num_blocks:
-        merged_blocks.append([])
-
-    return merged_blocks
-
-def blocks_to_string(blocks):
-    result = []
-    for block in blocks:
-        block_string = "".join(token.string for token in block)
-        result.append(block_string)
-    return result
-
-def clean_code(code):
+def split_into_blocks_by_lines(code, num_blocks):
+    """
+    Split the code into a given number of blocks based on line count.
+    This ensures the number of blocks is proportional to the size of the file.
+    """
     lines = code.splitlines()
-    clean_lines = []
-    block = []
+    block_size = max(1, len(lines) // num_blocks)  # Calculate block size based on line count
 
-    for line in lines:
-        block.append(line)
-        try:
-            list(tokenize.generate_tokens(StringIO("\n".join(block)).readline))
-            clean_lines.extend(block)
-            block = []
-        except tokenize.TokenError:
-            # Continue accumulating lines in the block until we get a valid tokenization or skip
-            continue
+    blocks = []
+    for i in range(0, len(lines), block_size):
+        block = lines[i:i + block_size]
+        blocks.append("\n".join(block))
 
-    return "\n".join(clean_lines)
+    return blocks
+
+def determine_num_blocks(num_lines):
+    """
+    Dynamically determine number of blocks based on number of lines.
+    Block sizes are adjusted for very small, medium, and large files.
+    """
+    if num_lines < 100:
+        return min(5, num_lines // 10 + 1)  # Small files: max 5 blocks
+    elif num_lines < 1000:
+        return min(10, num_lines // 100 + 1)  # Medium files: max 10 blocks
+    else:
+        return max(10, num_lines // 100 + 1)  # Large files: block size adjusts to 100 lines
+
+def generate_output_filename(source_file):
+    """
+    Automatically generate an output filename based on the source file name.
+    Example: if source_file is 'addSubtract.cpp', the output file will be 'output_addSubtract.txt'.
+    """
+    base_name = os.path.basename(source_file)  # Extract file name from full path
+    name_without_extension = os.path.splitext(base_name)[0]  # Remove extension
+    return f"output_{name_without_extension}.txt"
+
+def browse_file():
+    """
+    Open a file dialog for the user to select a source file.
+    """
+    root = tk.Tk()
+    root.withdraw()  # Hide the root window
+    file_path = filedialog.askopenfilename(
+        title="Select the Source Code File",
+        filetypes=[("C++ Files", "*.cpp"), ("Python Files", "*.py"), ("All Files", "*.*")]
+    )
+    return file_path
 
 def send_chat(file_path, output_file):
     code = read_file(file_path)
-    clean_code_str = clean_code(code)
-    num_lines = count_lines(clean_code_str)
+    num_lines = count_lines(code)
     
-    if num_lines < 500:
-        num_blocks = min(5, num_lines // 100 + 1)
-    elif num_lines < 1000:
-        num_blocks = min(10, num_lines // 100 + 1)
-    else:
-        num_blocks = max(10, num_lines // 100 + 1)
-
-    tokens = tokenize_code(clean_code_str)
-    if not tokens:
-        print("No tokens generated, exiting.")
-        return
-
-    blocks = split_into_blocks(tokens, num_blocks)
-    block_strings = blocks_to_string(blocks)
+    # Determine the number of blocks dynamically based on file length
+    num_blocks = determine_num_blocks(num_lines)
+    
+    # Split the code into a reasonable number of blocks based on line count
+    blocks = split_into_blocks_by_lines(code, num_blocks)
 
     chat_model = ChatModel.from_pretrained("chat-bison@002")
 
+    # Increased max_output_tokens to ensure larger code blocks are handled
     parameters = {
-        "temperature": 0.2, # Temperature controls the degree of randomness in token selection.
-        "max_output_tokens": 256, # Token limit determines the maximum amount of text output.
+        "temperature": 0.2,  # Temperature controls the degree of randomness in token selection.
+        "max_output_tokens": 512,  # Increased token limit to handle larger blocks of code.
         "top_p": 0.95,
         "top_k": 40,
     }
@@ -138,21 +117,36 @@ def send_chat(file_path, output_file):
     )
 
     with open(output_file, 'w') as file:
-        for i, block in enumerate(block_strings, 1):
+        last_processed_line = 0  # Track the last line processed to ensure no skipping
+
+        for i, block in enumerate(blocks, 1):
             code_block = f"Block {i}:\n{block}\n{'-'*40}"
+            print(f"Processing Block {i}...")  # Console output for block status
+
             try:
                 if block.strip():
-                    response = chat.send_message(code_block, **parameters)  # code blocks are sent here
-                    print(f"writing the documentation of block {i} to output file")
-                    file.write(f"\n==== Start of Block {i} ====")
+                    # Process the code block
+                    response = chat.send_message(code_block, **parameters)
+                    formatted_response = response.text.strip().replace('. ', '.\n')
+
+                    # Write the block information
+                    file.write(f"\n==== Start of Block {i} ====\n")
                     file.write(f"\n==== Description of Block {i} ====\n")
-                    file.write(response.text.strip())
+                    file.write(formatted_response)
                     file.write(f"\n==== End of Block {i} ====\n")
+
+                    # Ensure no skipped lines by tracking the processed line numbers
+                    processed_lines = block.splitlines()
+                    current_line_number = last_processed_line + len(processed_lines)
+                    last_processed_line = current_line_number
+
                 else:
                     file.write(f"\n==== Start of Block {i} ====\n")
                     file.write(f"No code provided in Block {i}")
                     file.write(f"\n==== End of Block {i} ====\n")
-                print(f"Documentation of block {i} is finished")
+
+                print(f"Finished Block {i}.")  # Console output to mark end of block
+
             except FileNotFoundError:
                 print(f"Error: File {file_path} not found.")
             except Exception as e:
@@ -162,8 +156,18 @@ def send_chat(file_path, output_file):
                 file.write(f"\n==== End of Error in Block {i} ====\n")
 
 if __name__ == "__main__":
-    filename = "C:\\Users\\shara\\source\\repos\\innovirtual-phase0\\GUI\\App\\InnoVirtual.cpp"
-    output_file = 'output.txt'  # Path to the output file
-    send_chat(filename, output_file)
+    # Open file dialog to select source file
+    source_file = browse_file()
+
+    if source_file:
+        # Generate the output filename based on the source file name
+        output_file = generate_output_filename(source_file)
+
+        print(f"Source File: {source_file}")
+        print(f"Output File: {output_file}")
+
+        send_chat(source_file, output_file)
+    else:
+        print("No file selected.")
 
     # [END aiplatform_sdk_chat]

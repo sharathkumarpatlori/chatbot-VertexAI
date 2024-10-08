@@ -1,0 +1,678 @@
+
+==== Start of Block 1 ====
+
+==== Description of Block 1 ====
+This block of code is the constructor of the `InnoVirtual` class.
+It initializes the main window of the application.
+
+- It includes various header files necessary for the functionality of the application.
+
+- It sets up the configuration and appearance of the main window, including its size, position, and title.
+
+- It fills the text browsers with relevant information.
+
+- It sets up the menu bar, title bar, and status bar.
+
+- It displays the information screen.
+
+- It creates the "File" ribbon.
+
+- It enables the frameless window to be moved by double-clicking on the menu bar.
+
+- It initializes the version number of the application.
+
+- It copies resource files from the application's resources to the user's home directory if they have been modified.
+
+- It checks the license type of the application and displays the activation screen if the license is not valid.
+==== End of Block 1 ====
+
+==== Start of Block 2 ====
+
+==== Description of Block 2 ====
+This block of code is the implementation of the `setupWindow` method of the `InnoVirtual` class.
+It sets up the main window of the application, including:
+
+- Establishing signal-slot connections between various widgets and the main window for communication and event handling.
+
+- Setting up UI events for the different widgets, such as opening folders, displaying layer paths, synchronizing layers, and managing documentation states.
+
+- Connecting UI events for the overview, project, object, and project list widgets.
+
+- Establishing connections for VCS (version control system) parameters and search mode.
+
+- Creating keyboard shortcuts for common actions like refresh, view project, and view object.
+==== End of Block 2 ====
+
+==== Start of Block 3 ====
+
+==== Description of Block 3 ====
+This block of code is the implementation of the `configWindow` method of the `InnoVirtual` class.
+It performs the following tasks:
+
+- Loads the list of available themes from the settings file and sets the current theme.
+
+- Reads the application settings from the settings file.
+
+- Loads the multi-theme supported stylesheet from the specified paths.
+==== End of Block 3 ====
+
+==== Start of Block 4 ====
+
+==== Description of Block 4 ====
+- This block of code is the implementation of the `FillTextBrowsers` method of the `InnoVirtual` class.
+It fills the text browsers in the application with HTML content.
+
+- It loads HTML files from specified paths and sets them as the content of the text browsers.
+
+- The HTML files contain information such as welcome messages, contact details, and about information.
+==== End of Block 4 ====
+
+==== Start of Block 5 ====
+
+==== Description of Block 5 ====
+- This block of code is the implementation of the `updateSearch` method of the `InnoVirtual` class.
+It updates the search combo box with the available file types.
+==== End of Block 5 ====
+
+==== Start of Block 6 ====
+
+==== Description of Block 6 ====
+- This block of code is the implementation of the `HideScrollAreasAndTextBrowsers` method of the `InnoVirtual` class.
+It hides all the scroll areas and text browsers in the application.
+==== End of Block 6 ====
+
+==== Start of Block 7 ====
+
+==== Description of Block 7 ====
+- This block of code contains several methods of the `InnoVirtual` class:
+
+- `HideScrollAreasAndTextBrowsers`: Hides all the scroll areas and text browsers in the application.
+
+- `ShowInfoScreen`: Shows the info screen by hiding all other areas and displaying the welcome text browser.
+
+- `ShowContactScreen`: Shows the contact screen by hiding all other areas and displaying the contact text browser.
+
+- `ShowDocumentationInfoScreen`: Shows the documentation screen by hiding all other areas and displaying the documentation text browser.
+
+- `ShowCreateNoteScreen`: Shows the create note screen by hiding all other areas and displaying the create note text browser.
+==== End of Block 7 ====
+
+==== Start of Block 8 ====
+
+==== Description of Block 8 ====
+- This block of code contains several methods of the `InnoVirtual` class:
+
+- `ShowCreateLineScreen`: Shows the create line screen.
+
+- `ShowCreateArrowScreen`: Shows the create arrow screen.
+
+- `ShowHistoryScreen`: Shows the history screen by hiding all other areas and displaying the history text browser.
+
+- `ShowTestCoverageScreen`: Shows the test coverage screen by hiding all other areas and displaying the test coverage text browser.
+
+- `ShowAboutScreen`: Shows the about screen by hiding all other areas and displaying the about text browser.
+==== End of Block 8 ====
+
+==== Start of Block 9 ====
+
+==== Description of Block 9 ====
+- `ShowActivationScreen`: Shows the activation screen by hiding all other areas and displaying the activation text browser.
+==== End of Block 9 ====
+
+==== Start of Block 10 ====
+
+==== Description of Block 10 ====
+- This block of code contains several methods of the `InnoVirtual` class:
+
+- `ShowActivationScreen`: Shows the activation screen by hiding all other areas and displaying the activation text browser.
+
+- `OpenSolutionDialog`: Opens a file dialog to select a solution file.
+
+- `ViewOverview`: Shows the overview screen by hiding all other areas and displaying the overview scroll area.
+
+- `ViewProject`: Shows the project screen by hiding all other areas and displaying the project scroll area.
+
+- `ViewObject`: Shows the object screen by hiding all other areas and displaying the object scroll area.
+==== End of Block 10 ====
+
+==== Start of Block 11 ====
+
+==== Description of Block 11 ====
+- `ViewObject`: Shows the object screen by hiding all other areas and displaying the object scroll area.
+
+- `ViewProjectList`: Shows the project list screen by hiding all other areas and displaying the project list scroll area.
+
+- `Refresh`: Refreshes the application by resetting the settings, reconfiguring the window, filling the text browsers, and refreshing the overview, project, and object widgets.
+
+- `RefreshTheme`: Refreshes the application's theme by resetting the settings, reconfiguring the window, filling the text browsers, and configuring the settings for the overview, project, object, and project list widgets.
+
+- `OpenProjectByPath`: Opens a project by a given path.
+==== End of Block 11 ====
+
+==== Start of Block 12 ====
+
+==== Description of Block 12 ====
+- `ZoomIn`: Zooms in on the current view (overview, project, or object).
+
+- `ListMode`: Switches the object view to list mode.
+
+- `ZoomOut`: Zooms out on the current view (overview, project, or object).
+
+- `ZoomFit`: Zooms the current view (overview, project, or object) to fit the entire content.
+
+- `ZoomReset`: Resets the zoom level of the current view (overview, project, or object) to the default value.
+==== End of Block 12 ====
+
+==== Start of Block 13 ====
+
+==== Description of Block 13 ====
+- `ZoomReset`: Resets the zoom level of the current view (overview, project, or object) to the default value.
+
+- `ProjectViewSearchChanged`: Performs a search in the project view based
+==== End of Block 13 ====
+
+==== Start of Block 14 ====
+
+==== Description of Block 14 ====
+- `ComboBoxModuleDepthChanged`: Handles changes to the module depth combo box in the overview, adjusting the depth level and updating the overview accordingly.
+
+- `CheckBoxSearchStateChanged`: Handles changes to the search mode check box in the overview, toggling between colorizing search results and resetting the child tokens.
+
+- `openFile`: Opens a file in the object view, setting the file name, source file name, subfolder name, root module name, and root path, and updating the search object.
+
+- `openFolder`: Opens a folder in the project view, setting the path and updating the search
+==== End of Block 14 ====
+
+==== Start of Block 15 ====
+
+==== Description of Block 15 ====
+- `gotoFolder`: Opens a folder in the project view, setting the path and updating the search.
+
+- `displayLayer1Path`: Displays the path of the current overview in the status bar.
+
+- `displayLayer2Path`: Displays the path of the current project in the status bar.
+
+- `displayLayer3Path`: Displays the path of the current object in the status bar.
+==== End of Block 15 ====
+
+==== Start of Block 16 ====
+
+==== Description of Block 16 ====
+- `displayLayer3Path`: Displays the path of the current object in the status bar.
+
+- `syncLayer2WithLayer1`: Sets a flag indicating that the project view (layer 2) should be synchronized with the overview (layer 1) when it is opened.
+
+- `setLayer1MaxDepthComboItems`: Sets the maximum depth value for the module
+==== End of Block 16 ====
+
+==== Start of Block 17 ====
+
+==== Description of Block 17 ====
+- `dragEnterEvent`: Handles drag enter events by accepting the proposed action if the mime data contains URLs.
+
+- `dropEvent`: Handles drop events by processing the URLs in the mime data and opening the corresponding files or folders in the overview, project, or object view.
+
+- `openProjectByPath`: Opens a project by a given path.
+==== End of Block 17 ====
+
+==== Start of Block 18 ====
+
+==== Description of Block 18 ====
+- `openProjectByPath`: Opens a project by a given path.
+
+- `resizeEvent`: Handles resize events by adjusting the dimensions of the overview, project, object, or project list view.
+==== End of Block 18 ====
+
+==== Start of Block 19 ====
+
+==== Description of Block 19 ====
+- `keyPressEvent`: Handles key press events by dispatching them to the overview widget if it is visible and has a root token.
+
+- `keyReleaseEvent`: Handles key release events by dispatching them to the overview widget if it is visible and has a root token.
+
+- `mousePressEvent`: Handles mouse press events by dispatching them to the overview widget if it is visible and has a root token.
+
+- `mouseReleaseEvent`: Handles mouse release events by dispatching them to the overview widget if it is visible and has a root token.
+==== End of Block 19 ====
+
+==== Start of Block 20 ====
+
+==== Description of Block 20 ====
+- `mouseMoveEvent`: Handles mouse move events by dispatching them to the overview widget if it is visible and has a root token.
+
+- `changeEvent`: Handles window change events, such as maximization, and adjusts the overview widget accordingly.
+
+- `setBold`: Sets the font of a widget to bold or normal.
+
+- `viewDB`: Opens a database viewer dialog.
+
+- `viewTheme`: Opens a theme selection dialog and handles signals related to theme selection and updates.
+==== End of Block 20 ====
+
+==== Start of Block 21 ====
+
+==== Description of Block 21 ====
+- `setBold`: Sets the font of an action button to bold or normal.
+
+- `actionOpenDirectory`: Opens a directory selection dialog.
+
+- `actionOpenProjectList`: Opens the project list view.
+
+- `actionLayer1`: Switches to the overview view.
+
+- `actionLayer2`: Switches to the project view.
+==== End of Block 21 ====
+
+==== Start of Block 22 ====
+
+==== Description of Block 22 ====
+- `actionLayer2`: Switches to the project view.
+
+- `actionLayer3`: Switches to the object view.
+
+- `actionInfo`: Opens the info screen.
+
+- `actionContact`: Opens the contact screen.
+==== End of Block 22 ====
+
+==== Start of Block 23 ====
+
+==== Description of Block 23 ====
+- `actionAbout`: Opens the about screen.
+
+- `actionActivation`: Opens the activation screen.
+
+- `actionActivateDocumentation`: Activates the documentation mode in the overview view.
+
+- `actionLayer1CreateArrow`: Starts the arrow creation process in the overview view.
+==== End of Block 23 ====
+
+==== Start of Block 24 ====
+
+==== Description of Block 24 ====
+- `actionLayer1CreateArrow`: Starts the arrow creation process in the overview view.
+
+- `actionLayer1CreateNote`: Starts the note creation process in the overview view.
+
+- `actionLayer1CreateLine`: Starts the line creation process in the overview view.
+==== End of Block 24 ====
+
+==== Start of Block 25 ====
+
+==== Description of Block 25 ====
+- `actionLayer1CreateLine`: Starts the line creation process in the overview view.
+
+- `actionLayer1HideDocuments`: Hides the documents in the overview view.
+
+- `actionLayer1ShowDocuments`: Shows the documents in the overview view.
+
+- `actionLayer1SaveChanges`: Saves the changes made in the documentation mode.
+==== End of Block 25 ====
+
+==== Start of Block 26 ====
+
+==== Description of Block 26 ====
+- `actionLayer1SaveChanges`: Saves the changes made in the documentation mode.
+
+- `actionLayer1ManageGroups`: Manages the groups in the documentation mode.
+
+- `actionExitDocumentation`: Exits the documentation mode.
+==== End of Block 26 ====
+
+==== Start of Block 27 ====
+
+==== Description of Block 27 ====
+- `actionActivateHistory`: Activates the history mode.
+
+- `actionActivateCoverage`: Activates the coverage mode.
+
+- `actionSettings`: Opens the settings dialog.
+
+- `actionLayer1ZoomToFit`: Zooms the overview view to fit the content.
+==== End of Block 27 ====
+
+==== Start of Block 28 ====
+
+==== Description of Block 28 ====
+- `actionLayer1ZoomToFit`: Zooms the overview view to fit the content.
+
+- `actionLayer1ZoomTo
+==== End of Block 28 ====
+
+==== Start of Block 29 ====
+
+==== Description of Block 29 ====
+- `100`: Zooms the project view to fit the content.
+
+- `actionZoomTo100L2`: Zooms the project view to 100%.
+
+- `actionZoomInL2`: Zooms in
+==== End of Block 29 ====
+
+==== Start of Block 30 ====
+
+==== Description of Block 30 ====
+- `the project view to fit the content.
+
+- `actionZoomTo100L3`: Zooms the object view to 100%.
+
+- `actionZoomInL3`: Zooms in the object view.
+
+- `action
+==== End of Block 30 ====
+
+==== Start of Block 31 ====
+
+==== Description of Block 31 ====
+- `actionLayer1UserView`: Switches the overview view to user view.
+
+- `actionLayer1SystemView`: Switches the overview view to system view.
+==== End of Block 31 ====
+
+==== Start of Block 32 ====
+
+==== Description of Block 32 ====
+- `actionLayer1Reset`: Resets the current project folder hierarchy to its original.
+
+- `actionLayer1FolderUp`: Moves up one level in the folder hierarchy of the overview view.
+
+- `actionLayer2FolderUp`: Moves up one level in the folder hierarchy of the project view.
+==== End of Block 32 ====
+
+==== Start of Block 33 ====
+
+==== Description of Block 33 ====
+- `actionLayer1CreateVirtualFolder`: Creates a new virtual folder in the overview view.
+
+- `ribbonTest`: Opens the ribbon test dialog.
+
+- `ribbonFile`: Opens the ribbon file dialog.
+==== End of Block 33 ====
+
+==== Start of Block 34 ====
+
+==== Description of Block 34 ====
+- `ribbonLayer1`: Opens the ribbon layer 1 dialog.
+==== End of Block 34 ====
+
+==== Start of Block 35 ====
+
+==== Description of Block 35 ====
+- `ribbonLayer2`: Opens the ribbon layer 2 dialog.
+==== End of Block 35 ====
+
+==== Start of Block 36 ====
+
+==== Description of Block 36 ====
+- `ribbonLayer3`: Opens the ribbon layer 3 dialog.
+
+- `ribbonHistory`: Opens the ribbon history dialog.
+==== End of Block 36 ====
+
+==== Start of Block 37 ====
+
+==== Description of Block 37 ====
+- `ribbonDocumentation`: Opens the ribbon documentation dialog.
+==== End of Block 37 ====
+
+==== Start of Block 38 ====
+
+==== Description of Block 38 ====
+- `ribbonTestCoverage`: Opens the ribbon test coverage dialog.
+
+- `ribbonHelp`: Opens the ribbon help dialog.
+==== End of Block 38 ====
+
+==== Start of Block 39 ====
+
+==== Description of Block 39 ====
+- `closeToolbars`: Closes all open toolbars.
+
+- `clearToolbarControls`: Removes all widgets from a specified toolbar.
+
+- `setupStatusbar`: Initializes the status bar of the application.
+
+- `setupMenubar`: Initializes the menu bar of the application.
+==== End of Block 39 ====
+
+==== Start of Block 40 ====
+
+==== Description of Block 40 ====
+- `createAndSetupToolbarItem`: Creates and sets up a toolbar item.
+
+- `createAndSetupMenuItem`: Creates and sets up a menu item.
+
+- `createAndSetupRibbonItem`: Creates and sets up a ribbon item.
+==== End of Block 40 ====
+
+==== Start of Block 41 ====
+
+==== Description of Block 41 ====
+- `createAndSetupMenuItem`: Creates and sets up a menu item.
+
+- `createAndSetupMenuActionItem`: Creates and sets up a menu action item.
+==== End of Block 41 ====
+
+==== Start of Block 42 ====
+
+==== Description of Block 42 ====
+- `createAndSetupRibbonItem`: Creates and sets up a ribbon item.
+
+- `createAndSetupMenuActionItem`: Creates and sets up a menu action item.
+==== End of Block 42 ====
+
+==== Start of Block 43 ====
+
+==== Description of Block 43 ====
+- `createAndSetupMenuActionItem`: Creates and sets up a menu action item.
+
+- `createAndSetupToolbarItem`: Creates and sets up a toolbar item.
+==== End of Block 43 ====
+
+==== Start of Block 44 ====
+
+==== Description of Block 44 ====
+- `createAndSetupToolbarItem`: Creates and sets up a toolbar item.
+
+- `createAndSetupToolbarActionItem`: Creates and sets up a toolbar action item.
+
+- `Connect`: Connects a signal to a slot using the names of the signal and slot as strings.
+
+- `GetCurrentToolBar`: Gets the current active/shown toolbar.
+==== End of Block 44 ====
+
+==== Start of Block 45 ====
+
+==== Description of Block 45 ====
+- `GetToolBar`: Gets the toolbar with the specified name.
+
+- `GetToolBarByFunction`: Gets the toolbar that supports the specified function.
+
+- `GetAction`: Gets the action item with the specified name.
+==== End of Block 45 ====
+
+==== Start of Block 46 ====
+
+==== Description of Block 46 ====
+- `GetAction`: Gets the action item with the specified name.
+
+- `getLayer1ControlState`: Gets the current layer 1 control state.
+
+- `setLayer1ControlState`: Sets the current layer 1 control state.
+
+- `getLayer1ViewState`: Gets the current layer 1 view state.
+
+- `setLayer1ViewState`: Sets the current layer 1 view state.
+
+- `getDocumentationState`: Gets the current documentation state.
+==== End of Block 46 ====
+
+==== Start of Block 47 ====
+
+==== Description of Block 47 ====
+- `setDocumentationState`: Sets the current documentation state.
+
+- `startCreateNoteActionProcess`: Starts the CreateNote action process.
+
+- `startCreateLineActionProcess`: Starts the CreateLine action process.
+
+- `slotEndCreateNoteActionProcess`: Ends the CreateNote action process.
+
+- `slotEndCreateLineActionProcess`: Ends the CreateLine action process.
+==== End of Block 47 ====
+
+==== Start of Block 48 ====
+
+==== Description of Block 48 ====
+- `slotEndCreateLineActionProcess`: Ends the CreateLine action process.
+
+- `endOngoingActionProcess`: Ends the ongoing action process.
+
+- `cancelCreateNoteActionProcess`: Cancels the CreateNote action process.
+
+- `cancelCreateLineActionProcess`: Cancels the CreateLine action process.
+==== End of Block 48 ====
+
+==== Start of Block 49 ====
+
+==== Description of Block 49 ====
+- `startCreateArrowActionProcess`: Starts the CreateArrow action process.
+
+- `endCreateArrowActionProcess`: Ends the CreateArrow action process.
+
+- `cancelCreateArrowActionProcess`: Cancels the CreateArrow action process.
+
+- `scrollRelativeOverviewWidget`: Handles the scrollRelativeOverviewWidget signal for triggering overviewWidget scrolling.
+==== End of Block 49 ====
+
+==== Start of Block 50 ====
+
+==== Description of Block 50 ====
+- `scrollAbsoluteOverviewWidget`: Handles the scrollAbsoluteOverviewWidget signal for triggering overviewWidget scrolling.
+
+- `scrollRelativeProjectWidget`: Handles the scrollRelativeProjectWidget signal for triggering ProjectWidget scrolling.
+
+- `scrollAbsoluteProjectWidget`: Handles the scroll
+==== End of Block 50 ====
+
+==== Start of Block 51 ====
+
+==== Description of Block 51 ====
+- `scrollAbsoluteProjectWidget` signal handler for triggering ProjectWidget scrolling.
+
+- `getScrollAreaMargins`: Returns the scroll margin size.
+
+- `getOverviewWidgetScroll`: Returns the current scroll-size.
+
+- `getOverviewScrollArea`: Returns a pointer to the scrollarea instance of the overview.
+==== End of Block 51 ====
+
+==== Start of Block 52 ====
+
+==== Description of Block 52 ====
+- `hideDocuments`: Hides the documents.
+
+- `showDocuments`: Shows the documents.
+
+- `setupTitleBar`: Sets up the title bar.
+==== End of Block 52 ====
+
+==== Start of Block 53 ====
+
+==== Description of Block 53 ====
+- `alignTitleBar`: Aligns the title bar.
+
+- `minimizeWindow`: Minimizes the app window.
+
+- `normalizeWindow`: Normalizes the app window.
+==== End of Block 53 ====
+
+==== Start of Block 54 ====
+
+==== Description of Block 54 ====
+- `maximizeWindow`: Maximizes the app window.
+
+- `closeWindow`: Closes the app window.
+==== End of Block 54 ====
+
+==== Start of Block 55 ====
+
+==== Description of Block 55 ====
+- `eventFilter`: Event filter handler for moving main windows by dragging titlebar when headerless window.
+==== End of Block 55 ====
+
+==== Start of Block 56 ====
+
+==== Description of Block 56 ====
+- `myReleaseEvent`: Method for release event.
+
+- `myDoubleClickEvent`: Method for double click event.
+
+- `timeOut`: Method for m_ReleaseEventTimer.
+==== End of Block 56 ====
+
+==== Start of Block 57 ====
+
+==== Description of Block 57 ====
+- `mouseReleaseEvent`: Other release events.
+
+- `getActiveScreen`: Gets the active screen.
+
+- `getAvailableThemeList`: Returns available theme list.
+
+- `updateSelectedTheme`: Writes theme to settings.
+
+- `getActiveTheme`: Returns active theme.
+==== End of Block 57 ====
+
+==== Start of Block 58 ====
+
+==== Description of Block 58 ====
+- `myScreenChanged`: Screen changed event handler.
+
+- `saveLayoutDocumentation`: Saves the layout documentation.
+
+- `slotGetVcsEnabled`: Returns Vcs->Enabled value in settingsapplication.ini.
+
+- `slotGetVcsApplyAllProjects`: Returns Vcs->ApplyAllProjects value in settingsapplication.ini.
+==== End of Block 58 ====
+
+==== Start of Block 59 ====
+
+==== Description of Block 59 ====
+- `slotGetVcsDocumentFileType`: Returns Vcs->DocumentFileType value in settingsapplication.ini.
+
+- `slotGetVcsAcceptableFileTypes`: Returns Vcs->AcceptableFileTypes value in settingsapplication.ini.
+
+- `slotGetSearchModeL1`: Returns selected search mode.
+
+- `openProjectByPath`: Opens project by name selected by projectlist widget.
+==== End of Block 59 ====
+
+==== Start of Block 60 ====
+
+==== Description of Block 60 ====
+- `openProjectLogicalModelById`: Opens project by dbid selected by projectlist widget.
+
+- `cleanToolbarInputs`: Cleans content of custom toolbar inputs.
+
+- `confirmCloseProject`: Asks for confirmation before closing the project.
+==== End of Block 60 ====
+
+==== Start of Block 61 ====
+
+==== Description of Block 61 ====
+- `copyResourcefile2UserhomeIfModified`: Controlled-copy of resource file to users home directory by checking modification date.
+
+- `loadLayer2Project`: Signal slot for loading project.
+
+- `ResetProject`: Resets layer1 project to its original folder hierarchy, removes virtual folders.
+==== End of Block 61 ====
+
+==== Start of Block 62 ====
+
+==== Description of Block 62 ====
+- `saveLayoutChanges`: Saves layout changes within current view.
+
+- `manageGroups`: Opens manage groups dialog and save changes.
+==== End of Block 62 ====

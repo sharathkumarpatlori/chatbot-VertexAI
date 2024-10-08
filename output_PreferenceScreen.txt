@@ -1,0 +1,116 @@
+
+==== Start of Block 1 ====
+
+==== Description of Block 1 ====
+This code snippet is a React component called `PreferenceScreen`.
+It's responsible for displaying and managing user preferences for a particular item.
+Let's break down the code step by step:
+
+1.
+**Importing Modules**:
+   - `import React, { useContext, useState, useEffect } from 'react'`: This line imports the React library and several React hooks (`useContext`, `useState`, and `useEffect`) that are used in the component.
+   - `import { Alert, Text, StyleSheet, View, ScrollView, Image, Platform, TouchableOpacity } from 'react-native'`: This line imports various React Native components and APIs that are used for building the user interface.
+   - `import {colors} from '../global/styles'`: This line imports a color palette from a separate file named `global/styles.js`.
+   - `import { Icon, CheckBox } from 'react-native-elements'`: This line imports icons and checkbox components from the `react-native-elements` library.
+   - `import { menuDetailedData } from '../global/Data'`: This line imports data about the menu item from a separate file named `global/Data.js`.
+   - `import AsyncStorage from '@react-native-async-storage/async-storage'`: This line imports the `AsyncStorage` API for storing data locally on the device.
+   - `import { CartContext } from '../contexts/cartContext'`: This line imports the `CartContext` from a separate file named `cartContext.js`.
+This context is used to manage the global cart state.
+
+2.
+**Functional Component**:
+   - `const PreferenceScreen = (props) => { ...
+}`: This is a functional component that takes `props` as an argument.
+
+3.
+**Destructuring Props**:
+   - `const { updateCart, addToCart, setCart, cartItems, setCartItems } = useContext(CartContext);`: This line destructures the `CartContext` and extracts several functions and variables that are used in the component.
+
+4.
+**State Management**:
+   - `const [state, setState] = useState({ ...
+})`: This line initializes the component's state using the `useState` hook.
+The initial state includes properties like `preference`, `required`, `minimum_quantity`, `counter`, `price`, and `totalItemsChecked`.
+
+5.
+**useEffect Hooks**:
+   - `useEffect(() =>
+==== End of Block 1 ====
+
+==== Start of Block 2 ====
+
+==== Description of Block 2 ====
+This code snippet is a continuation of the `PreferenceScreen` component.
+It includes additional functions and logic for handling user interactions and managing the state of the component.
+
+1.
+**Handling Preference Toggle**:
+   - `const handlePreferenceToggle = (itemIndex, subItemIndex) => { ...
+}`: This function handles the toggling of preferences for a specific item.
+It updates the `preference` state, calculates the total checked items and price, and updates the global cart state accordingly.
+
+2.
+**Handling Quantity Change**:
+   - `const handleQuantityChange = (change) => { ...
+}`: This function handles the change in quantity for the selected preferences.
+It ensures that the quantity doesn't go below the required minimum and updates the total checked items and price accordingly.
+
+3.
+**Handling Add to Cart**:
+   - `const handleAddToCart = () => { ...
+}`: This function handles the "Add to Cart" button click.
+It checks if the selected items meet the minimum required quantity, filters out items already in the cart, and adds new items to the cart.
+It then updates the global cart state and navigates to the Checkout page.
+
+4.
+**Rendering the UI**:
+   - The component returns a JSX structure that includes various UI elements such as images, text, icons, and buttons.
+It displays the meal details, preference options, and allows users to select preferences, change quantities, and add items to the cart.
+==== End of Block 2 ====
+
+==== Start of Block 3 ====
+
+==== Description of Block 3 ====
+This code snippet is the remaining part of the `PreferenceScreen` component.
+It includes the rendering of the UI elements for displaying preferences, handling quantity changes, and adding items to the cart.
+
+1.
+**Rendering Preferences**:
+   - The component iterates through the `preference` state and displays each preference group with its title and options.
+
+2.
+**Handling Required Items**:
+   - For preference groups that have required items, it displays a message indicating the minimum required quantity.
+
+3.
+**Rendering Preference Options**:
+   - Each preference option is rendered as a touchable opacity, allowing users to toggle the selection.
+   - It includes a checkbox, item name, and price.
+
+4.
+**Handling Quantity Change**:
+   - There are buttons to increase or decrease the quantity of selected items.
+   - The `handleQuantityChange` function is called to update the state and global cart accordingly.
+
+5.
+**Handling Add to Cart**:
+   - The "Add to Cart" button calls the `handleAddToCart` function to add selected items to the cart and navigate to the Checkout page.
+
+6.
+**Styling**:
+   - The component uses a stylesheet (`styles`) to define the layout and appearance of the UI elements.
+==== End of Block 3 ====
+
+==== Start of Block 4 ====
+
+==== Description of Block 4 ====
+This code snippet contains the remaining styles for the `PreferenceScreen` component.
+It defines the appearance of various UI elements such as the header, title, overlay, scroll view content, rows, text elements, and views.
+==== End of Block 4 ====
+
+==== Start of Block 5 ====
+
+==== Description of Block 5 ====
+This code snippet contains the remaining styles for the `PreferenceScreen` component.
+It defines the appearance of various UI elements such as the header, title, overlay, scroll view content, rows, text elements, and views.
+==== End of Block 5 ====
