@@ -1,5 +1,0 @@
-
-==== Error in Block 1 ====
-400 Project `1050455572036` is not allowed to use Publisher Model `projects/code-analyse/locations/us-central1/publishers/google/models/chat-bison@002`
-test output for hello world  
-==== End of Error in Block 1 ====
