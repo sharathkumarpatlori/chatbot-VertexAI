@@ -34,3 +34,6 @@ chat-bison@002 test function:
 
 Response: The main function is the entry point of the program.
 It prints the message "Hello, World!" to the standard output stream and then terminates the program.
+
+Chat-bison2 is not working, because all PaLM models are migrated to Gemini API with gemini models
+Steps to follow for migration from PaLM to Gemini models - https://cloud.google.com/vertex-ai/generative-ai/docs/migrate/migrate-palm-to-gemini

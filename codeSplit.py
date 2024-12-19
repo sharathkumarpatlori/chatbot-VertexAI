@@ -16,7 +16,7 @@
 
 import tokenize
 from io import StringIO
-from vertexai.language_models import ChatModel, InputOutputTextPair
+from vertexai.generative_models import GenerativeModel # PaLM to Gemini Migration
 import os
 import tkinter as tk
 from tkinter import filedialog
@@ -95,7 +95,7 @@ def send_chat(file_path, output_file):
     # Split the code into a reasonable number of blocks based on line count
     blocks = split_into_blocks_by_lines(code, num_blocks)
 
-    chat_model = ChatModel.from_pretrained("chat-bison@002")
+    chat_model = GenerativeModel("gemini-1.0-pro-002")   # PALM to gemini code migration
 
     # Increased max_output_tokens to ensure larger code blocks are handled
     parameters = {
@@ -105,17 +105,21 @@ def send_chat(file_path, output_file):
         "top_k": 40,
     }
 
-    chat = chat_model.start_chat(
-        context="""You are a customer service chatbot for creating documentation of source code. 
-                You only explain the customer questions of lines of code with less than 300 words.""",
-        examples=[
-            InputOutputTextPair(
-                input_text="#include <iostream>",
-                output_text="This line incorporates the contents of the <iostream> header file into the current code.",
-            ),
-        ],
-    )
+    context="""You are a customer service chatbot for creating documentation of source code. 
+                You only explain the customer questions of lines of code with less than 300 words."""
 
+    
+    examples=[
+            { "input" : "#include <iostream>",
+              "output" : "This line incorporates the contents of the <iostream> header file into the current code."  
+            } 
+        ]
+    
+    example_prompts = "\n".join([f"Input: {e['input']}\nOutput: {e['output']}" for e in examples])
+    full_context = f"{context}\n\n{example_prompts}"
+
+    chat = chat_model.start_chat(context=full_context)
+    
     with open(output_file, 'w') as file:
         last_processed_line = 0  # Track the last line processed to ensure no skipping
 
