@@ -1,0 +1,18 @@
+
+==== Start of Block 1 ====
+
+==== Description of Block 1 ====
+That Kotlin code defines a data class named `LoggedInUser`.
+
+The line `package de.joeybag.joeybag.data.model` specifies the package where this class belongs within the project's structure.
+ Packages help organize code and prevent naming conflicts.
+
+The `data class` keyword automatically generates several methods (like `equals()`, `hashCode()`, `toString()`, etc.) based on the properties defined within the class.
+
+`LoggedInUser` has two properties:
+
+* `userId`: A string representing the user's ID.
+* `displayName`: A string representing the user's display name.
+
+The Javadoc-style comment above the class describes its purpose: to hold user information for logged-in users, obtained from a `LoginRepository`.
+==== End of Block 1 ====

@@ -1,0 +1,35 @@
+
+==== Start of Block 1 ====
+
+==== Description of Block 1 ====
+That line, `package de.joeybag.joeybag`, declares a Java package named `de.joeybag.joeybag`.
+ In Android development, packages organize your code into a hierarchical structure, similar to folders on your computer.
+ This specific package name likely reflects the developer's domain (`de`) and project name (`joeybag`).
+ It's crucial for preventing naming conflicts with other code and ensuring proper organization within a larger Android project.
+ The subsequent `import` statements bring in necessary classes from the Android SDK for creating an `AppCompatActivity` (a basic Android activity) and using the `Bundle` class for managing activity data.
+==== End of Block 1 ====
+
+==== Start of Block 2 ====
+
+==== Description of Block 2 ====
+This line defines a class named `MainActivity` that inherits from the `AppCompatActivity` class.
+ This is common in Android development.
+
+`AppCompatActivity` provides basic building blocks for an Android activity (a single screen in an app).
+ The `MainActivity` class extends this, adding its own specific functionality.
+
+The code within the curly braces `{}` defines the class's methods.
+ `onCreate` is a special method called when the activity is first created.
+ `super.onCreate(savedInstanceState)` calls the parent class's `onCreate` method, performing essential setup.
+ `setContentView(R.layout.activity_main)` loads the user interface layout defined in the `activity_main.xml` file, making it visible on the screen.
+==== End of Block 2 ====
+
+==== Start of Block 3 ====
+
+==== Description of Block 3 ====
+That's the closing curly brace `}`.
+ In C++, curly braces `{}` define blocks of code.
+ This particular `}` closes a code block that was opened earlier with an opening curly brace `{`.
+ It signifies the end of a function, loop, conditional statement, or other structured code section.
+ The specific meaning depends on where it appears in the code.
+==== End of Block 3 ====
