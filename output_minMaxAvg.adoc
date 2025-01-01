@@ -1,0 +1,91 @@
+==== Summary of Functions and Classes ====
+
+==== End of Summary ====
+
+==== Start of Block 1 (Lines 1-8) ====
+
+==== Description of Block 1 ====
+That code snippet sets up a C++ program to get user input and find the maximum and minimum numbers within a set of inputs.
+Let's break it down line by line:
+
+* `#include <iostream>`: This line includes the iostream library, which provides input/output functionalities in C++, allowing you to use `std::cout` (for printing to the console) and potentially `std::cin` (for reading from the console).
+
+* `#include <stdio.h>`: This line includes the stdio.h library, which is a C library providing standard input/output functions.
+ While functional,  `iostream` is generally preferred in C++ for better type safety and integration with the C++ standard.
+
+* `int main()`: This is the main function where the program execution begins.
+
+* `int userInput = 0;`: This declares an integer variable named `userInput` and initializes it to 0.
+ This variable will store the numbers entered by the user.
+
+* `int maxNumber = 0;`: Declares an integer variable `maxNumber` and initializes it to 0.
+This will store the largest number entered.
+
+* `int minNumber = 100;`: Declares an integer variable `minNumber` and initializes it to 100.
+This will store the smallest number entered.
+ The initial value of 100 assumes the user will input numbers less than or equal to 100.
+ If you expect larger numbers, you should choose a different initial value for `minNumber`.
+==== End of Block 1 ====
+
+==== Start of Block 2 (Lines 9-16) ====
+
+==== Description of Block 2 ====
+This code snippet initializes two variables, `sumTotal` (an integer) and `average` (a float), both to 0.
+ It then uses a `for` loop to prompt the user to enter three numbers using `std::cout`.
+ The entered numbers are read using `scanf("%d", &userInput)`,  stored in a variable `userInput` (not shown in the provided snippet, but assumed to be an integer), and presumably added to `sumTotal` (this addition is not shown in the provided code).
+ The loop iterates three times.
+ The code is incomplete as it doesn't show how the `average` is calculated or the `userInput` variable is declared and used within the loop.
+==== End of Block 2 ====
+
+==== Start of Block 3 (Lines 17-24) ====
+
+==== Description of Block 3 ====
+The line `std::cout << userInput << "\n";` sends the value of the variable `userInput` to the standard output stream (usually your console) followed by a newline character (`\n`), which moves the cursor to the next line.
+ It's a way to display the content of `userInput` on the screen.
+
+The `if(userInput > maxNumber)` block checks if the current `userInput` is greater than the current `maxNumber`.
+If it is, it updates `maxNumber` to store the new larger value.
+ This keeps track of the largest number entered so far.
+
+Similarly, the `if(userInput < minNumber)` block checks if `userInput` is smaller than the current `minNumber`.
+If true, it updates `minNumber` to store this new smaller value, thus tracking the smallest number entered.
+==== End of Block 3 ====
+
+==== Start of Block 4 (Lines 25-32) ====
+
+==== Description of Block 4 ====
+That code snippet is part of a larger program that calculates the maximum, minimum, sum, and average of three user inputs.
+
+- `minNumber = userInput;` This line assigns the value stored in the `userInput` variable to the `minNumber` variable.
+ This happens inside a conditional block (not shown), implying it only occurs if `userInput` is smaller than the current value of `minNumber`.
+
+- `sumTotal += userInput;` This line adds the value of `userInput` to the current value of `sumTotal`.
+ The `+=` operator is a shorthand for `sumTotal = sumTotal + userInput;`.
+ This accumulates the sum of all user inputs.
+==== End of Block 4 ====
+
+==== Start of Block 5 (Lines 33-35) ====
+
+==== Description of Block 5 ====
+That line of code prints the calculated average to the console.
+
+Let's break it down:
+
+* `std::cout`: This is the standard output stream in C++.
+ It's where data is sent to be displayed on the screen.
+
+* `<<`: This is the insertion operator.
+It sends the data on its right to the output stream on its left.
+
+* `"Average = "`: This is a string literal.
+It's the text "Average = " that will be printed first.
+
+* `average`: This is a variable (presumably holding a numerical value representing the average).
+ Its value will be printed after "Average = ".
+
+* `\n`: This is a newline character.
+It moves the cursor to the next line after printing the average, so subsequent output will appear on a new line.
+
+* `return 0;`: This line is not part of the printing statement.
+It's the return statement of the `main` function, indicating successful program execution.
+==== End of Block 5 ====

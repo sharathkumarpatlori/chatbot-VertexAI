@@ -1,0 +1,17 @@
+
+==== Start of Block 1 ====
+
+==== Description of Block 1 ====
+The line `#include <iostream>` includes the iostream standard library.
+ This library provides input/output functionalities,  making it possible to use things like `std::cout` (for printing to the console) and `std::endl` (for inserting a newline character).
+
+`int main() { ...
+}` is the main function where program execution begins.
+ The code inside the curly braces `{}` will be executed.
+
+`std::cout << "Hello, World!" << std::endl;` prints the text "Hello, World!" to the console.
+ `std::cout` is the standard output stream, `<<` is the insertion operator sending data to the stream, and `std::endl` adds a newline, moving the cursor to the next line.
+
+`return 0;` indicates that the program executed successfully.
+ A non-zero return value usually signifies an error.
+==== End of Block 1 ====
